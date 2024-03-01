@@ -4,5 +4,8 @@
         "src/shared/config/i18n"
     ],
     "i18n-ally.sourceLanguage": "en",
+    "cSpell.words": [
+        "Главная"
+    ],
 
 }
