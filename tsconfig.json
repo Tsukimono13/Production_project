@@ -35,7 +35,13 @@
   },
   "ts-node": {
     "compilerOptions": {
-      "module": "CommonJS"
+      "module": "CommonJS",
+      "jsx": "react-jsx",
     }
-  }
+  },
+  "include": [
+    "./config/jest/setupTests.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
 }
