@@ -15,10 +15,44 @@
     gap: 15px;
 }
 
+.link {
+    opacity: 1;
+}
+
+.collapseBtn {
+    position: absolute;
+    right: -40px;
+    bottom: 40px;
+    gap: 10px;
+}
+
+.items {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    gap: 14px;
+
+    .item {
+        display: flex;
+        gap: 10px;
+    }
+}
+
 .collapsed {
     width: var(--sidebar-width-collapsed);
 
     .switchers {
         flex-wrap: wrap;
+    }
+
+    .link {
+        opacity: 0;
+        transition: 0.2s opacity;
+        width: 0;
+    }
+
+    .items {
+        align-items: center;
     }
 }
