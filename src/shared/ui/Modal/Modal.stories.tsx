@@ -1,8 +1,8 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Modal } from './Modal';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
+import { Modal } from './Modal';
 
 export default {
     title: 'shared/Modal',
@@ -26,4 +26,4 @@ Dark.args = {
     children: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, quia.',
 };
 
-Dark.decorators = [ThemeDecorator(Theme.DARK)]
+Dark.decorators = [ThemeDecorator(Theme.DARK)];
