@@ -31,4 +31,4 @@ Secondary.args = {
     children: 'TEXT',
 };
 
-Secondary.decorators = [ThemeDecorator(Theme.DARK)];
+// Secondary.decorators = [ThemeDecorator(Theme.DARK)];
