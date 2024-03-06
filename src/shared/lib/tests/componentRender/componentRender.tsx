@@ -1,6 +1,6 @@
 import { DeepPartial } from '@reduxjs/toolkit';
 import { render } from '@testing-library/react';
-import { StateSchema, StoreProvide } from 'app/providers/StoreProvider';
+import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
 import { ReactNode } from 'react';
 import { I18nextProvider } from 'react-i18next';
 import { MemoryRouter } from 'react-router-dom';
@@ -14,12 +14,12 @@ export interface componentRenderOptions {
 export function componentRender(component: ReactNode, options: componentRenderOptions = {}) {
     const { route = '/', initialState } = options;
     return render(
-        <StoreProvide initialState={initialState}>
+        <StoreProvider initialState={initialState}>
             <MemoryRouter initialEntries={[route]}>
                 <I18nextProvider i18n={i18nForTests}>
                     {component}
                 </I18nextProvider>
             </MemoryRouter>
-        </StoreProvide>,
+        </StoreProvider>,
     );
 }

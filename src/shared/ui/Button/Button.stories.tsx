@@ -105,3 +105,10 @@ RoundSizeL.args = {
     round: true,
     size: ButtonSize.L,
 };
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+    children: 'Text',
+    theme: ThemeButton.BACKGROUND_INVERTED,
+    disabled: true,
+};

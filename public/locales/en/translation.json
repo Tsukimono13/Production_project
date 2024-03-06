@@ -9,7 +9,10 @@
     "Главная" : "Main",
     "О сайте" : "About",
     "Короткий вариант": "En",
-    "Войти": "Log In",
+    "Войти": "Login",
     "Введите username": "Write username",
-    "Введите пароль": "Write password"
+    "Введите пароль": "Write password",
+    "Форма авторизации": "Authorization form",
+    "Вы ввели неверный логин или пароль": "Wrong password or username",
+    "Выйти": "Logout"
 }
