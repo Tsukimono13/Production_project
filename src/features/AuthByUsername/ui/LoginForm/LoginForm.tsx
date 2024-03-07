@@ -7,6 +7,7 @@ import { memo, useCallback, useEffect } from 'react';
 import { TextTheme, Text } from 'shared/ui/Text/Text';
 import { ReduxStoreWithManager } from 'app/providers/StoreProvider';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
 import { loginActions, loginReducer } from '../../model/slice/LoginSlice';
 import cls from './LoginForm.module.scss';
@@ -15,7 +16,6 @@ import { getLoginUsername } from '../../model/selectors/getLoginUsername/getLogi
 import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLoginPassword';
 import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading/getLoginIsLoading';
 import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 
 export interface LoginFormProps {
   className?: string;
