@@ -25,5 +25,14 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": { 
+    "first": "Irina",
+    "lastname": "Litvinova",
+    "age": 29,
+    "currency": "RUB",
+    "country": "Vietnam",
+    "city": "Nha Trang",
+    "username": "admin",
+    "avatar": "https://i.pinimg.com/originals/f9/90/5e/f9905e59ecd27af6211ef25366a75e5a.png"
+   }
 }
