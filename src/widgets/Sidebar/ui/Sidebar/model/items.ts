@@ -1,5 +1,5 @@
-import React from "react";
-import { RoutePath } from "shared/config/routeConfig/RouteConfig";
+import React from 'react';
+import { RoutePath } from 'shared/config/routeConfig/RouteConfig';
 import MainSvg from 'shared/assets/icons/main.svg';
 import AboutSvg from 'shared/assets/icons/about.svg';
 import ProfileSvg from 'shared/assets/icons/profile.svg';
@@ -7,7 +7,8 @@ import ProfileSvg from 'shared/assets/icons/profile.svg';
 export interface SidebarItemType {
     path: string;
     text: string;
-    Icon: React.VFC<React.SVGProps<SVGAElement>>
+    Icon: React.VFC<React.SVGProps<SVGAElement>>;
+    authOnly?: boolean;
 }
 
 export const SidebarItemsList: SidebarItemType[] = [
@@ -20,6 +21,7 @@ export const SidebarItemsList: SidebarItemType[] = [
         path: RoutePath.profile,
         Icon: ProfileSvg,
         text: 'Профиль',
+        authOnly: true,
     },
     {
         path: RoutePath.about,
