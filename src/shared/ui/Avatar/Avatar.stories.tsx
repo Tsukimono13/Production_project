@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import { Avatar } from './Avatar';
-import AvatarExample from './chibi.png';
+import AvatarExample from '../../assets/tests/chibi.png';
 
 export default {
     title: 'shared/Avatar',
