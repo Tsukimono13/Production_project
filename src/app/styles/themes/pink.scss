@@ -1,11 +1,18 @@
 .app_bright_theme {
     --bg-color: #d58080;
-    --inverted-bg-color: #FBF4F4;
-    --primary-color: #FBF4F4;
-    --secondary-color: #FBF4F4;
+    --inverted-bg-color: #fbf4f4;
+    --primary-color: #fbf4f4;
+    --secondary-color: #fbf4f4;
     --inverted-primary-color: #d58080;
-    --inverted-secondary-color: #CB6B62;
+    --inverted-secondary-color: #cb6b62;
 
+    // hover
+    --hover-btn: #d34c4c;
+
+    // skeleton
     --skeleton-shadow: #ece1e1e6;
-    --skeleton-color: rgba(236, 210, 210, 0.796);
+    --skeleton-color: rgb(236 210 210 / 79.6%);
+
+    // code
+    --code-bg: #d9a1a194;
 }

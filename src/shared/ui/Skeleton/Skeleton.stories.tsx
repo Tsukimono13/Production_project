@@ -45,5 +45,3 @@ PinkTheme.args = {
 };
 
 PinkTheme.decorators = [ThemeDecorator(Theme.BRIGHT)];
-
-

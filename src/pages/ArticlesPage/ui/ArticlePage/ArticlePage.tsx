@@ -1,17 +1,18 @@
 import React, { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Input } from 'shared/ui/Input/Input';
+import { classNames } from 'shared/lib/classNames/classNames';
+import cls from './ArticlePage.module.scss';
 
 interface ArticlePageProps {
     className?: string;
 }
 
 const ArticlePage = (props: ArticlePageProps) => {
-    const {className} = props;
+    const { className } = props;
     const { t } = useTranslation('article');
 
     return (
-        <div>
+        <div className={classNames(cls.ArticlePage, {}, [className])}>
             {t('ARTICLe')}
         </div>
     );

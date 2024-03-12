@@ -2,7 +2,7 @@
 @import "variables/global";
 @import "themes/dark";
 @import "themes//norml.scss";
-@import "themes/pink.scss";
+@import "themes//pink.scss";
 
 .app,
 .app_modal {
@@ -24,4 +24,5 @@
     padding: 25px 20px 20px 50px;
     height: calc(100vh - var(--navbar-height));
     overflow-y: auto;
+    width: 80%;
 }
