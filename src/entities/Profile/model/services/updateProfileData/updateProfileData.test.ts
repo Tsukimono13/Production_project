@@ -13,6 +13,7 @@ const data = {
     first: 'Tsuki',
     lastname: 'Mono',
     username: 'admin',
+    id: '1',
 };
 
 describe('updateProfileData', () => {

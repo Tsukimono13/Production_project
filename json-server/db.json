@@ -19,7 +19,9 @@
       "img": "https://cdn2.iconfinder.com/data/icons/designer-skills/128/code-programming-javascript-software-develop-command-language-1024.png",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -100,6 +102,30 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "Hellooooo",
+      "id": "9rDC6dH"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "Hellooooo",
+      "id": "J7milAi"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "he he",
+      "id": "0_1NRyo"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "he he he",
+      "id": "aYCRIWr"
     }
   ],
   "users": [
@@ -118,14 +144,28 @@
       "avatar": "https://i.pinimg.com/736x/9f/3a/da/9f3ada5db0d3581a8111f401790726a1.jpg"
     }
   ],
-  "profile": {
-    "first": "Irina",
-    "lastname": "Litvinova",
-    "age": 29,
-    "currency": "USD",
-    "country": "Vietnam",
-    "city": "Nha Trang",
-    "username": "admin",
-    "avatar": "https://i.pinimg.com/originals/f9/90/5e/f9905e59ecd27af6211ef25366a75e5a.png"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Irina",
+      "lastname": "Litvinova",
+      "age": 29,
+      "currency": "USD",
+      "country": "Vietnam",
+      "city": "Nha Trang",
+      "username": "admin",
+      "avatar": "https://i.pinimg.com/originals/f9/90/5e/f9905e59ecd27af6211ef25366a75e5a.png"
+    },
+    {
+      "id": "2",
+      "first": "Iroko",
+      "lastname": "JJ",
+      "age": 2229,
+      "currency": "USD",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "Tsuki2",
+      "avatar": "https://i.pinimg.com/736x/9f/3a/da/9f3ada5db0d3581a8111f401790726a1.jpg"
+    }
+  ]
 }
