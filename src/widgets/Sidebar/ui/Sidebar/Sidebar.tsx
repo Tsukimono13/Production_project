@@ -9,7 +9,6 @@ import cls from './Sidebar.module.scss';
 import SidebarItem from '../SidebarItem/SidebarItem';
 import { getSidebarItems } from '../../model/selectors/getSidebarItems';
 
-
 interface SidebarProps {
   className?: string;
 }
