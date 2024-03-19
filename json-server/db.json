@@ -646,11 +646,11 @@
     },
     {
       "id": "10",
-      "title": "HTML что за зверь?",
+      "title": "REact",
       "subtitle": "Рассказываем и показываем",
       "img": "https://logodix.com/logo/470388.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 1500,
+      "createdAt": "24.06.2021",
       "userId": "1",
       "type": [
         "IT"
@@ -716,14 +716,14 @@
     },
     {
       "id": "11",
-      "title": "HTML что за зверь?",
+      "title": "TypeScript",
       "subtitle": "Рассказываем и показываем",
       "img": "https://logodix.com/logo/470388.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 344,
+      "createdAt": "16.04.2015",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -786,14 +786,14 @@
     },
     {
       "id": "12",
-      "title": "HTML что за зверь?",
+      "title": "Всё о IT",
       "subtitle": "Рассказываем и показываем",
       "img": "https://logodix.com/logo/470388.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 654,
+      "createdAt": "12.05.2021",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -856,11 +856,11 @@
     },
     {
       "id": "13",
-      "title": "HTML что за зверь?",
+      "title": "HTML",
       "subtitle": "Рассказываем и показываем",
       "img": "https://logodix.com/logo/470388.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 122,
+      "createdAt": "26.02.2024",
       "userId": "1",
       "type": [
         "IT"

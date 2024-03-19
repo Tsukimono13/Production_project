@@ -4,17 +4,17 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { Theme } from 'app/providers/ThemeProvider';
 
 import { action } from '@storybook/addon-actions';
-import ArticlePage from './ArticlePage';
+import { ArticleSortSelector } from './ArticleSortSelector';
 
 export default {
-    title: 'pages/Article/ArticlePage',
-    component: ArticlePage,
+    title: 'pages/Article/ArticleViewSelector',
+    component: ArticleSortSelector,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-} as ComponentMeta<typeof ArticlePage>;
+} as ComponentMeta<typeof ArticleSortSelector>;
 
-const Template: ComponentStory<typeof ArticlePage> = (args) => <ArticlePage {...args} />;
+const Template: ComponentStory<typeof ArticleSortSelector> = (args) => <ArticleSortSelector {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
