@@ -226,11 +226,11 @@
     },
     {
       "id": "4",
-      "title": "HTML что за зверь?",
+      "title": "О стеке простыми словами — для студентов и просто начинающих",
       "subtitle": "Рассказываем и показываем",
-      "img": "https://logodix.com/logo/470388.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://kit8.net/wp-content/uploads/2020/12/Coding@2x.png",
+      "views": 12224,
+      "createdAt": "16.04.2023",
       "userId": "1",
       "type": [
         "IT"
@@ -241,7 +241,10 @@
           "type": "TEXT",
           "title": "Заголовок этого блока",
           "paragraphs": [
-            "HTML (Hypertext Markup Language) - это код, который используется для структурирования и отображения веб-страницы и её контента. Например, контент может быть структурирован внутри множества параграфов, маркированных списков или с использованием изображений и таблиц данных."
+            "Стек (англ. stack — стопка; читается стэк) — абстрактный тип данных, представляющий собой список элементов, организованных по принципу LIFO (англ. last in — first out, «последним пришёл — первым вышел»).",
+
+            "Достаточно полное определение, но возможно для новичков оно будет немного трудным для понимания.",
+            "Поэтому первое, на чем бы я хотел заострить внимание, это представление стека в виде вещей из жизни. Первой на ум мне пришла интерпретация в виде стопки книг, где верхняя книга — это вершина."
           ]
         },
         {
@@ -296,11 +299,11 @@
     },
     {
       "id": "5",
-      "title": "HTML что за зверь?",
+      "title": "Насмотренность в разработке: путь к красивому и чистому коду",
       "subtitle": "Рассказываем и показываем",
-      "img": "https://logodix.com/logo/470388.png",
+      "img": "https://avatars.mds.yandex.net/i?id=1094df77bc79ba495960f13bab1fc8fa73569ba8-10471440-images-thumbs&n=13",
       "views": 1022,
-      "createdAt": "26.02.2022",
+      "createdAt": "22.02.2014",
       "userId": "1",
       "type": [
         "IT"
@@ -366,14 +369,14 @@
     },
     {
       "id": "6",
-      "title": "HTML что за зверь?",
+      "title": "Как разработать свой SaaS повышения конверсии сайтов",
       "subtitle": "Рассказываем и показываем",
-      "img": "https://logodix.com/logo/470388.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/c85/80a/560/c8580a5601f62139c2bf353854cfc39f.png",
+      "views": 3,
+      "createdAt": "26.11.2023",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -436,14 +439,14 @@
     },
     {
       "id": "7",
-      "title": "HTML что за зверь?",
+      "title": "Отвечаем на критику по IP-камерам НИЦ «Технологии»",
       "subtitle": "Рассказываем и показываем",
-      "img": "https://logodix.com/logo/470388.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://habrastorage.org/r/w780/getpro/habr/upload_files/edb/751/e17/edb751e176c04a8021ddb21ccbd3dbbe.jpg",
+      "views": 557,
+      "createdAt": "26.08.2021",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -506,11 +509,11 @@
     },
     {
       "id": "8",
-      "title": "HTML что за зверь?",
+      "title": "Глубокий взгляд на асинхронность в Java Script: роль Event Loop, Event Bus, промисов и async/await",
       "subtitle": "Рассказываем и показываем",
-      "img": "https://logodix.com/logo/470388.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/765/3b6/7b6/7653b67b6119963f7fe8fcee7065e10c.png",
+      "views": 10243,
+      "createdAt": "26.06.2024",
       "userId": "1",
       "type": [
         "IT"
@@ -576,14 +579,14 @@
     },
     {
       "id": "9",
-      "title": "HTML что за зверь?",
+      "title": "Восприятие английского на слух: упражнения, полезные советы и подборка ресурсов",
       "subtitle": "Рассказываем и показываем",
-      "img": "https://logodix.com/logo/470388.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "img": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/d0e/e77/c02/d0ee77c02009049d989b4c7bc3d70ccf.png",
+      "views": 674,
+      "createdAt": "11.03.2022",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -646,9 +649,9 @@
     },
     {
       "id": "10",
-      "title": "REact",
+      "title": "React",
       "subtitle": "Рассказываем и показываем",
-      "img": "https://logodix.com/logo/470388.png",
+      "img": "https://static10.tgcnt.ru/posts/_0/c8/c8f7f4fa968020aa5670c7d1c00fc320.jpg",
       "views": 1500,
       "createdAt": "24.06.2021",
       "userId": "1",
@@ -718,12 +721,12 @@
       "id": "11",
       "title": "TypeScript",
       "subtitle": "Рассказываем и показываем",
-      "img": "https://logodix.com/logo/470388.png",
+      "img": "https://monmon.jp/wp-content/uploads/2021/07/1626681809-4b1666ee86013348fc863d95e7eb4879.png",
       "views": 344,
       "createdAt": "16.04.2015",
       "userId": "1",
       "type": [
-        "ECONOMICS"
+        "SCIENCE"
       ],
       "blocks": [
         {
@@ -788,7 +791,7 @@
       "id": "12",
       "title": "Всё о IT",
       "subtitle": "Рассказываем и показываем",
-      "img": "https://logodix.com/logo/470388.png",
+      "img": "https://www.it-world.ru/upload/iblock/3f6/6c5bvtxl1zu15ocotsmcsk1e6k2xi6ew/shutterstock_1033853617.jpg",
       "views": 654,
       "createdAt": "12.05.2021",
       "userId": "1",
@@ -858,7 +861,7 @@
       "id": "13",
       "title": "HTML",
       "subtitle": "Рассказываем и показываем",
-      "img": "https://logodix.com/logo/470388.png",
+      "img": "https://ichip.ru/images/cache/2023/9/9/q90_782932_ed826b936b7846b9c9fbd0944.jpeg",
       "views": 122,
       "createdAt": "26.02.2024",
       "userId": "1",

@@ -1,5 +1,5 @@
 import { ArticleSortField, ArticleView } from 'entities/Article';
-import { ArticleViewSelector } from 'pages/ArticlesPage/ui/ArticleViewSelector/ArticleViewSelector';
+import { ArticleViewSelector } from 'entities/Article/ui/ArticleViewSelector/ArticleViewSelector';
 import { memo, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
@@ -8,7 +8,7 @@ import { Select } from 'shared/ui/Select/Select';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Card } from 'shared/ui/Card/Card';
 import { Input } from 'shared/ui/Input/Input';
-import { ArticleSortSelector } from 'pages/ArticlesPage/ui/ArticleSortSelector/ArticleSortSelector';
+import { ArticleSortSelector } from 'entities/Article/ui/ArticleSortSelector/ArticleSortSelector';
 import { SortOrder } from 'shared/types';
 import { useDebounce } from 'shared/lib/hooks/useDebounce/useDebounce';
 import { TabItem, Tabs } from 'shared/ui/Tabs/Tabs';
@@ -19,7 +19,7 @@ import {
 } from '../../model/selectors/articlesPageSelectors';
 import cls from './ArticlesPageFilters.module.scss';
 import { articlesPageActions } from '../../model/slices/articlesPageSlice';
-import { ArticleTypeTabs } from '../ArticleTypeTabs/ArticleTypeTabs';
+import { ArticleTypeTabs } from '../../../../entities/Article/ui/ArticleTypeTabs/ArticleTypeTabs';
 
 interface ArticlesPageFiltersProps {
     className?: string;
