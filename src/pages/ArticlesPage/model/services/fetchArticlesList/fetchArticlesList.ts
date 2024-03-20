@@ -19,7 +19,7 @@ export const fetchArticlesList = createAsyncThunk<Article[], FetchArticlesListPr
     'articlesPage/fetchArticlesList',
     async (props, thunkApi) => {
         const { extra, rejectWithValue, getState } = thunkApi;
-        // const { page = 1 } = props;
+
         const limit = getArticlesPageLimit(getState());
         const sort = getArticlesPageSort(getState());
         const order = getArticlesPageOrder(getState());
@@ -43,9 +43,12 @@ export const fetchArticlesList = createAsyncThunk<Article[], FetchArticlesListPr
                 },
             });
 
+            if (!response.data) {
+                throw new Error();
+            }
+
             return response.data;
         } catch (e) {
-            console.log(e);
             return rejectWithValue('error');
         }
     },

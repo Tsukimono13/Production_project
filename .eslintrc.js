@@ -43,7 +43,7 @@ module.exports = {
         'no-underscore-dangle': 'off',
         'linebreak-style': 0,
         'i18next/no-literal-string': ['error',
-            { markupOnly: true, ignoreAttribute: ['data-testid', 'to', 'border'] }],
+            { markupOnly: true, ignoreAttribute: ['data-testid', 'to', 'border', 'target'] }],
         'max-len': ['error', { ignoreComments: true, code: 120 }],
         'jsx-a11y/no-static-element-interactions': 'off',
         'jsx-a11y/click-events-have-key-events': 'off',
@@ -53,6 +53,7 @@ module.exports = {
         'no-undef': 'off',
         'no-unused-vars': 'off',
         'react/no-array-index-key': 'off',
+        'arrow-body-style': 'off',
         '@typescript-eslint/no-unused-vars': [
             'warn',
             { argsIgnorePattern: '^_' },
