@@ -13,6 +13,17 @@
     }
 }
 
+.inverted {
+    .text,
+    .title {
+        color: var(--inverted-primary-color);
+    }
+}
+
+.inverted {
+
+}
+
 .left {
     text-align: left;
 }
