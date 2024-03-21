@@ -7,7 +7,7 @@ import { action } from '@storybook/addon-actions';
 import { ArticleSortSelector } from './ArticleSortSelector';
 
 export default {
-    title: 'pages/Article/ArticleViewSelector',
+    title: 'entities/Article/ArticleViewSelector',
     component: ArticleSortSelector,
     argTypes: {
         backgroundColor: { control: 'color' },
