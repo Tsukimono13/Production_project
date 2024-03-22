@@ -59,6 +59,13 @@ OnlyTextDark.args = {
 
 OnlyTextDark.decorators = [ThemeDecorator(Theme.DARK)];
 
+export const SizeS = Template.bind({});
+SizeS.args = {
+    title: 'Lorem ipsum dolor',
+    text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, quia.',
+    size: TextSize.S,
+};
+
 export const SizeM = Template.bind({});
 SizeM.args = {
     title: 'Lorem ipsum dolor',
