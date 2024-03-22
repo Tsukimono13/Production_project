@@ -7,10 +7,6 @@ import { Text, TextSize } from 'shared/ui/Text/Text';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useSelector } from 'react-redux';
-import {
-    getArticleCommentsError,
-    getArticleCommentsIsLoading,
-} from 'pages/ArticleDetailsPage/model/selectors/comments';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { AddCommentForm } from 'features/addCommentForm';
@@ -20,8 +16,12 @@ import { Page } from 'widgets/Page/Page';
 import {
     getArticleRecommendationsIsLoading,
     getArticleRecommendationsError,
-} from 'pages/ArticleDetailsPage/model/selectors/recommendations';
-import { articleDetailsPageReducers } from 'pages/ArticleDetailsPage/model/slices';
+} from '../../model/selectors/recommendations';
+import { articleDetailsPageReducers } from '../../model/slices';
+import {
+    getArticleCommentsError,
+    getArticleCommentsIsLoading,
+} from '../../model/selectors/comments';
 import {
     addCommentForArticle,
 } from '../../model/services/addCommentForArticle/addCommentForArticle';

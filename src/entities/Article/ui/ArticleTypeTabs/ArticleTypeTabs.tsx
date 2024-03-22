@@ -1,10 +1,8 @@
 import { memo, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Select, SelectOption } from 'shared/ui/Select/Select';
-import { ArticleSortField, ArticleType } from 'entities/Article';
-import { SortOrder } from 'shared/types';
 import { TabItem, Tabs } from 'shared/ui/Tabs/Tabs';
+import { ArticleType } from '../../model/types/article';
 
 interface ArticleTypeTabsProps {
     className?: string;

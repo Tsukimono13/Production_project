@@ -22,6 +22,7 @@ module.exports = {
         '@typescript-eslint',
         'i18next',
         'react-hooks',
+        'tsuki-prod-plugin',
     ],
     rules: {
         'react/jsx-indent': [2, 4],
@@ -54,6 +55,7 @@ module.exports = {
         'no-unused-vars': 'off',
         'react/no-array-index-key': 'off',
         'arrow-body-style': 'off',
+        'tsuki-prod-plugin/path-checker': 'error',
         '@typescript-eslint/no-unused-vars': [
             'warn',
             { argsIgnorePattern: '^_' },
