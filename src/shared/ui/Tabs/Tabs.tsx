@@ -1,6 +1,6 @@
-import { Mods, classNames } from 'shared/lib/classNames/classNames';
+import { classNames } from 'shared/lib/classNames/classNames';
 import {
-    CSSProperties, ReactNode, memo, useCallback,
+    ReactNode, memo, useCallback,
 } from 'react';
 import cls from './Tabs.module.scss';
 import { Card, CardTheme } from '../Card/Card';
