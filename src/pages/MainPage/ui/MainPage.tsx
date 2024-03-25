@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Input } from 'shared/ui/Input/Input';
-import { ListBox } from 'shared/ui/ListBox/ListBox';
 import { Page } from 'widgets/Page/Page';
 
 const MainPage = () => {

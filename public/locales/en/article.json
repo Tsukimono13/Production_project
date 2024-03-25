@@ -16,6 +16,8 @@
     "Наука" : "Science",
     "Все" : "All",
     "Статьи не найдены" : "Articles not found",
-    "Комментарии" : "Recommendations",
-    "Редактировать" : "Edit"
+    "Комментарии" : "Comments",
+    "Рекомендуем" : "Recommendations",
+    "Редактировать" : "Edit",
+    "Ошибка при загрузке статей" : "Article loading error"
 }
