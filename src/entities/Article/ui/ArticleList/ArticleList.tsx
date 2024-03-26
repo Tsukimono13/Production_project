@@ -17,6 +17,7 @@ interface ArticleListProps {
     isLoading?: boolean;
     view?: ArticleView;
     target?: HTMLAttributeAnchorTarget;
+    virtualized?: boolean;
 }
 
 const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.SMALL ? 9 : 3)
@@ -31,6 +32,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
         articles,
         isLoading,
         target,
+        virtualized = true,
         view = ArticleView.SMALL,
     } = props;
     const { t } = useTranslation('article');
@@ -89,17 +91,30 @@ export const ArticleList = memo((props: ArticleListProps) => {
                     ref={registerChild}
                     className={classNames(cls.ArticleList, {}, [className, cls[view]])}
                 >
-                    <List
-                        height={height ?? 630}
-                        rowCount={rowCount}
-                        rowHeight={isBig ? 630 : 330}
-                        rowRenderer={rowRender}
-                        width={width ? width - 85 : 630}
-                        autoHeight
-                        onScroll={onChildScroll}
-                        isScrolling={isScrolling}
-                        scrollTop={scrollTop}
-                    />
+                    {virtualized ? (
+                        <List
+                            height={height ?? 630}
+                            rowCount={rowCount}
+                            rowHeight={isBig ? 630 : 330}
+                            rowRenderer={rowRender}
+                            width={width ? width - 85 : 630}
+                            autoHeight
+                            onScroll={onChildScroll}
+                            isScrolling={isScrolling}
+                            scrollTop={scrollTop}
+                        />
+                    ) : (
+                        articles.map((item) => (
+                            <ArticleListItem
+                                article={item}
+                                view={view}
+                                target={target}
+                                key={item.id}
+                                className={cls.card}
+                            />
+                        ))
+                    )}
+
                     {isLoading && getSkeletons(view)}
                 </div>
             )}
