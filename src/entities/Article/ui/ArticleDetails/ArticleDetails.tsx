@@ -31,7 +31,7 @@ const reducers: ReducersList = {
 
 interface ArticleDetailsProps {
     className?: string;
-    id: string;
+    id?: string;
 }
 
 export const ArticleDetails = memo((props: ArticleDetailsProps) => {
