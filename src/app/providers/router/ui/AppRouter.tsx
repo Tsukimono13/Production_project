@@ -1,11 +1,9 @@
-import React, {
-    Suspense, memo, useCallback, useMemo,
+import {
+    Suspense, memo, useCallback,
 } from 'react';
-import { useSelector } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
-import { AppRouters, AppRoutersProps, routeConfig } from 'shared/config/routeConfig/RouteConfig';
+import { AppRoutersProps, routeConfig } from 'shared/config/routeConfig/RouteConfig';
 import { PageLoader } from 'widgets/PageLoader/ui/PageLoader';
-import { getUserData } from 'entities/User';
 import { RequireAuth } from './RequireAuth';
 
 const AppRouter = () => {
@@ -19,7 +17,7 @@ const AppRouter = () => {
             <Route
                 key={route.path}
                 path={route.path}
-                element={route.authOnly ? <RequireAuth>{element}</RequireAuth> : element}
+                element={route.authOnly ? <RequireAuth roles={route.roles}>{element}</RequireAuth> : element}
             />
         );
     }, []);

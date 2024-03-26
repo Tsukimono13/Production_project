@@ -1012,15 +1012,22 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN",
+      "roles": ["ADMIN"],
       "avatar": "https://i.pinimg.com/originals/f9/90/5e/f9905e59ecd27af6211ef25366a75e5a.png"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER",
+      "roles": ["USER"],
       "avatar": "https://i.pinimg.com/736x/9f/3a/da/9f3ada5db0d3581a8111f401790726a1.jpg"
+    },
+    {
+      "id": "3",
+      "username": "manager",
+      "password": "123",
+      "roles": ["MANAGER"],
+      "avatar": "https://p7.hiclipart.com/preview/435/40/972/5bbe8cd074088.jpg"
     }
   ],
   "profile": [

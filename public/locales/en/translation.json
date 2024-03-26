@@ -23,5 +23,7 @@
     "Введите текст комментария" : "Write a comment",
     "Отправить" : "Send",
     "Читать далее" : "Read more",
-    "Создать статью" : "Create article"
+    "Создать статью" : "Create article",
+    "Админка": "Admin",
+    "У вас нет доступа к этой странице": "Do not have access"
 }
