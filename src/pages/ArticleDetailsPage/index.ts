@@ -1,5 +1,5 @@
 export { ArticleEditPageAsync as ArticleDetailsPage } from './ui/ArticleDetailsPage/ArticleDetailsPage.async';
 
-export { ArticleDetailsCommentsSchema } from './model/types/ArticleDetailsCommentsSchema';
-export { ArticlePageRecommendationsSchema } from './model/types/ArticlePageRecommendationsSchema';
-export { ArticleDetailsPageSchema } from './model/types/index';
+export type { ArticleDetailsCommentsSchema } from './model/types/ArticleDetailsCommentsSchema';
+export type { ArticlePageRecommendationsSchema } from './model/types/ArticlePageRecommendationsSchema';
+export type { ArticleDetailsPageSchema } from './model/types/index';

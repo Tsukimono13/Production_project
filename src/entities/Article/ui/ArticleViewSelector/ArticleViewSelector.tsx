@@ -7,7 +7,7 @@ import BlocksSvg from 'shared/assets/icons/pictureBlocks.svg';
 import { Icon } from 'shared/ui/Icon/Icon';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
 import cls from './ArticleViewSelector.module.scss';
-import { ArticleView } from '../../model/types/article';
+import { ArticleView } from '../../model/consts/articleConsts';
 
 interface ArticleViewSelectorProps {
     className?: string;

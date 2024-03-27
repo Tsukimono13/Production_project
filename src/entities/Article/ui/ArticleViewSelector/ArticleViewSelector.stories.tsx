@@ -1,7 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import { ArticleViewSelector } from './ArticleViewSelector';
-import { ArticleView } from '../../model/types/article';
 
 export default {
     title: 'entities/Article/ArticleViewSelector',

@@ -20,10 +20,11 @@ import {
     getArticleDetailsIsLoading,
 } from '../../model/selectors/articleDetails';
 import cls from './ArticleDetails.module.scss';
-import { ArticleBlock, ArticleBlockType } from '../../model/types/article';
+import { ArticleBlock } from '../../model/types/article';
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
+import { ArticleBlockType } from '../../model/consts/articleConsts';
 
 const reducers: ReducersList = {
     articleDetails: articleDetailsReducer,
