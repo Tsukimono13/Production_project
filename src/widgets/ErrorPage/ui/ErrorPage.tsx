@@ -1,6 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
+import { Page } from 'widgets/Page/Page';
 import cls from './ErrorPage.module.scss';
 
 interface ErrorPageProps {
@@ -15,7 +16,7 @@ export const ErrorPage = ({ className }: ErrorPageProps) => {
         location.reload();
     };
     return (
-        <div
+        <Page
             className={classNames(cls.ErrorPage, { }, [className])}
         >
             <p>{t('Произошла непредвиденная ошибка')}</p>
@@ -25,6 +26,6 @@ export const ErrorPage = ({ className }: ErrorPageProps) => {
             >
                 {t('Обновить страницу')}
             </Button>
-        </div>
+        </Page>
     );
 };
