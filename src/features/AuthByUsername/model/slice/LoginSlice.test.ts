@@ -1,4 +1,4 @@
-import { UserSchema } from 'entities/User';
+import { UserSchema } from '@/entities/User';
 import { LoginSchema } from '../types/loginSchema';
 import { loginActions, loginReducer } from './LoginSlice';
 

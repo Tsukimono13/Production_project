@@ -1,8 +1,8 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import { Theme } from 'app/providers/ThemeProvider';
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { Theme } from '@/app/providers/ThemeProvider';
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { ArticleList } from './ArticleList';
 import { Article } from '../../model/types/article';
 import { ArticleView } from '../../model/consts/articleConsts';
@@ -102,7 +102,6 @@ LoadingBig.args = {
     articles: [],
     isLoading: true,
     view: ArticleView.BIG,
-    virtualized: false,
 };
 
 export const LoadingSmall = Template.bind({});
@@ -110,7 +109,6 @@ LoadingSmall.args = {
     articles: [],
     isLoading: true,
     view: ArticleView.SMALL,
-    virtualized: false,
 };
 
 export const ListSmall = Template.bind({});
@@ -123,7 +121,6 @@ ListSmall.args = {
         })),
     isLoading: false,
     view: ArticleView.SMALL,
-    virtualized: false,
 };
 
 export const ListSmallDark = Template.bind({});
@@ -136,7 +133,6 @@ ListSmallDark.args = {
         })),
     isLoading: false,
     view: ArticleView.SMALL,
-    virtualized: false,
 };
 ListSmallDark.decorators = [ThemeDecorator(Theme.DARK)];
 
@@ -150,7 +146,6 @@ ListBig.args = {
         })),
     isLoading: false,
     view: ArticleView.BIG,
-    virtualized: false,
 };
 
 export const ListBigDark = Template.bind({});
@@ -163,7 +158,6 @@ ListBigDark.args = {
         })),
     isLoading: false,
     view: ArticleView.BIG,
-    virtualized: false,
 };
 
 ListBigDark.decorators = [ThemeDecorator(Theme.DARK)];

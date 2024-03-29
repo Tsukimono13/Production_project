@@ -1,11 +1,11 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames } from '@/shared/lib/classNames/classNames';
 
-import ListSvg from 'shared/assets/icons/list.svg';
-import BlocksSvg from 'shared/assets/icons/pictureBlocks.svg';
-import { Icon } from 'shared/ui/Icon/Icon';
-import { Button, ThemeButton } from 'shared/ui/Button/Button';
+import ListSvg from '@/shared/assets/icons/list.svg';
+import BlocksSvg from '@/shared/assets/icons/pictureBlocks.svg';
+import { Icon } from '@/shared/ui/Icon/Icon';
+import { Button, ThemeButton } from '@/shared/ui/Button/Button';
 import cls from './ArticleViewSelector.module.scss';
 import { ArticleView } from '../../model/consts/articleConsts';
 
