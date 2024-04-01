@@ -3,11 +3,12 @@ import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
 
 import ListSvg from '@/shared/assets/icons/list.svg';
-import BlocksSvg from '@/shared/assets/icons/pictureBlocks.svg';
+import BlocksSvg from '@/shared/assets/icons/block.svg';
 import { Icon } from '@/shared/ui/Icon/Icon';
 import { Button, ThemeButton } from '@/shared/ui/Button/Button';
 import cls from './ArticleViewSelector.module.scss';
 import { ArticleView } from '../../model/consts/articleConsts';
+import { Theme, useTheme } from '@/app/providers/ThemeProvider';
 
 interface ArticleViewSelectorProps {
     className?: string;
@@ -29,10 +30,13 @@ const viewTypes = [
 export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
     const { className, view, onViewClick } = props;
     const { t } = useTranslation();
+    const { theme } = useTheme();
 
     const onClick = (newView: ArticleView) => () => {
         onViewClick?.(newView);
     };
+
+    const svgColor = theme === Theme.LIGHT ? [cls.darkSvg] : [cls.lightSvg];
 
     return (
         <div className={classNames(cls.ArticleViewSelector, {}, [className])}>
@@ -44,7 +48,7 @@ export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
                 >
                     <Icon
                         Svg={viewType.icon}
-                        className={classNames(cls.svg, { [cls.notSelected]: viewType.view !== view })}
+                        className={classNames(cls.svg, { [cls.selected]: viewType.view === view })}
                     />
                 </Button>
             ))}
