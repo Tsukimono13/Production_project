@@ -1,9 +1,16 @@
 .Page {
     flex-grow: 1;
-    padding: 25px 20px 20px 50px;
     height: calc(100vh - var(--navbar-height));
     overflow-y: auto;
     flex-shrink: 100;
+    padding: 16px;
+}
+
+.content {
+    background-color: var(--content-bg-color);
+    border-radius: 8px;
+    padding: 44px;
+    min-height: 100%;
 }
 
 .trigger {

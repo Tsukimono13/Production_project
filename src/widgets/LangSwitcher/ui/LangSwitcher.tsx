@@ -2,6 +2,9 @@ import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Button, ThemeButton } from '@/shared/ui/Button/Button';
+import EnSvg from '@/shared/assets/icons/en.svg';
+import RuSvg from '@/shared/assets/icons/ru.svg';
+import { Icon } from '@/shared/ui/Icon/Icon';
 
 interface LangSwitcherProps {
   className?: string;
@@ -15,12 +18,15 @@ export const LangSwitcher = memo(({ className, short }: LangSwitcherProps) => {
         i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
     };
 
+    const icon = i18n.language === 'ru' ? <Icon Svg={RuSvg} /> : <Icon Svg={EnSvg} />;
+
     return (
         <Button
-            theme={ThemeButton.CLEAR_INVERTED}
+            theme={ThemeButton.CLEAR}
             onClick={toggle}
         >
-            {t(short ? 'Короткий вариант' : 'Язык')}
+            {icon}
+            {/* {t(short ? 'Короткий вариант' : 'Язык')} */}
         </Button>
     );
 });

@@ -51,7 +51,9 @@ export const Page = ({ className, children, onScrollEnd }: PageProps) => {
             onScroll={onScrollHandler}
             id={PAGE_ID}
         >
-            {children}
+            <div className={cls.content}>
+                {children}
+            </div>
             {onScrollEnd ? <div className={cls.trigger} ref={triggerRef} /> : null}
         </main>
     );

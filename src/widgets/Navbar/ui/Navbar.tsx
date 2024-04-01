@@ -8,12 +8,13 @@ import { LoginModal } from '@/features/AuthByUsername';
 import {
     getUserData,
 } from '@/entities/User';
-import { Text, TextTheme } from '@/shared/ui/Text/Text';
 import { RoutePath } from '@/shared/config/routeConfig/RouteConfig';
 import { HStack } from '@/shared/ui/Stack';
 import { NotificationButton } from '@/features/notificationButton';
 import { AvatarDropdown } from '@/features/avatarDropdown';
 import cls from './Navbar.module.scss';
+import { Icon } from '@/shared/ui/Icon/Icon';
+import LogoSvg from '@/shared/assets/icons/logo.svg';
 
 interface NavbarProps {
   className?: string;
@@ -35,19 +36,17 @@ export const Navbar = memo(({ className }: NavbarProps) => {
     if (authData) {
         return (
             <header className={classNames(cls.navbar, {}, [className])}>
-                <Text
-                    title={t('tsukimono')}
-                    theme={TextTheme.INVERTED}
-                    className={cls.appName}
-                />
-                <AppLink
-                    to={RoutePath.article_create}
-                    theme={AppLinkTheme.SECONDARY}
-                    className={cls.createBtn}
-                >
-                    {t('Создать статью')}
+                <AppLink to={RoutePath.main}>
+                    <Icon Svg={LogoSvg} className={cls.logo} />
                 </AppLink>
-                <HStack gap="16" className={cls.actions}>
+                <HStack gap="12" className={cls.actions}>
+                    <AppLink
+                        to={RoutePath.article_create}
+                        theme={AppLinkTheme.BORDER}
+                        className={cls.createBtn}
+                    >
+                        {t('Создать статью')}
+                    </AppLink>
                     <NotificationButton />
                     <AvatarDropdown />
                 </HStack>

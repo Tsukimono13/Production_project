@@ -9,6 +9,11 @@ import { VStack } from '@/shared/ui/Stack/VStack/VStack';
 import cls from './Sidebar.module.scss';
 import SidebarItem from '../SidebarItem/SidebarItem';
 import { getSidebarItems } from '../../model/selectors/getSidebarItems';
+import OpenSvg from '@/shared/assets/icons/left.svg';
+import CloseSvg from '@/shared/assets/icons/right.svg';
+import { Icon } from '@/shared/ui/Icon/Icon';
+import ChangeSvg from '@/shared/assets/icons/change.svg';
+import { HStack } from '@/shared/ui/Stack';
 
 interface SidebarProps {
   className?: string;
@@ -41,18 +46,24 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
                 data-testid="sidebar-toggle"
                 onClick={onToggle}
                 className={cls.collapseBtn}
-                theme={ThemeButton.BACKGROUND_INVERTED}
+                theme={ThemeButton.CLEAR}
                 round
             >
-                {collapsed ? '>' : '<'}
+                {collapsed ? <Icon Svg={OpenSvg} /> : <Icon Svg={CloseSvg} />}
             </Button>
-            <VStack role="navigation" gap="8" className={cls.items}>
+            <VStack role="navigation" gap="16" className={cls.items}>
                 {itemsList}
             </VStack>
-            <div className={cls.switchers}>
-                <ThemeSwitcher />
-                <LangSwitcher short={collapsed} />
-            </div>
+            <VStack max gap="12" className={cls.switchers}>
+                <HStack gap="4">
+                    <LangSwitcher />
+                    {!collapsed && <Icon Svg={ChangeSvg} />}
+                </HStack>
+                <HStack gap="4">
+                    <ThemeSwitcher />
+                    {!collapsed && <Icon Svg={ChangeSvg} />}
+                </HStack>
+            </VStack>
         </aside>
     );
 });

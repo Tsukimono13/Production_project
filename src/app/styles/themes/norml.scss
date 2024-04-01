@@ -1,13 +1,15 @@
 :root {
-    --bg-color: rgb(240 240 249 / 96.3%);
+    --bg-color: rgba(255, 247, 252, 1);
+    --header-color: rgba(213, 99, 154, 1);
+    --content-bg-color: rgba(255, 255, 255, 1);
     --inverted-bg-color: rgb(11 11 11 / 94.8%);
-    --primary-color: rgb(15 17 18 / 92.3%);
+    --primary-color: rgba(34, 4, 19, 1);
     --secondary-color: rgb(144 0 255 / 80.1%);
     --inverted-primary-color: rgb(234 243 234);
     --inverted-secondary-color: rgb(39 193 183);
 
     // hover
-    --hover-btn: rgb(144 0 255 / 80.1%);
+    --hover-btn:rgba(213, 99, 154, 1);
 
     // skeleton
     --skeleton-shadow: #17161653;
@@ -22,4 +24,8 @@
     // listbox
     --listbox-bg: #73737314;
     --listbox-hover: rgb(144 0 255 / 80.1%);
+
+    //scroll
+    --scroll-color: rgba(208, 196, 202, 0.5);
+    --scroll-hover: rgba(208, 196, 202, 0.7);
 }
