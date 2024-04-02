@@ -1,11 +1,8 @@
 .ArticleViewSelector {
     display: flex;
-    gap: 5px;
-    justify-content: end;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    gap: 8px;
 }
 
 .selected {
-  fill:  rgba(213, 99, 154, 1); 
+    fill: rgb(213 99 154 / 100%);
 }

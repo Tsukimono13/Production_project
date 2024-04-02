@@ -1,15 +1,18 @@
 :root {
-    --bg-color: rgba(255, 247, 252, 1);
-    --header-color: rgba(213, 99, 154, 1);
-    --content-bg-color: rgba(255, 255, 255, 1);
+    --bg-color: rgb(255 247 252 / 100%);
+    --header-color: rgb(213 99 154 / 100%);
+    --content-bg-color: rgb(255 255 255 / 100%);
     --inverted-bg-color: rgb(11 11 11 / 94.8%);
-    --primary-color: rgba(34, 4, 19, 1);
-    --secondary-color: rgb(144 0 255 / 80.1%);
+    --primary-color: rgb(34 4 19 / 100%);
+    --secondary-color: rgb(213 99 154 / 100%);
     --inverted-primary-color: rgb(234 243 234);
     --inverted-secondary-color: rgb(39 193 183);
 
     // hover
-    --hover-btn:rgba(213, 99, 154, 1);
+    --hover-btn: rgb(213 99 154 / 100%);
+
+    // icon
+    --icon-color: rgb(126 116 124 / 100%);
 
     // skeleton
     --skeleton-shadow: #17161653;
@@ -18,14 +21,18 @@
     // code
     --code-bg: #73737314;
 
+    // input
+    --placeholder-color: rgb(126 116 124 / 100%);
+
     // card
-    --card-bg: #73737314;
+    --card-bg: rgb(244 242 243 / 100%);
+    --tab-color: rgb(255 228 244 / 100%);
 
     // listbox
     --listbox-bg: #73737314;
     --listbox-hover: rgb(144 0 255 / 80.1%);
 
-    //scroll
-    --scroll-color: rgba(208, 196, 202, 0.5);
-    --scroll-hover: rgba(208, 196, 202, 0.7);
+    // scroll
+    --scroll-color: rgb(208 196 202 / 50%);
+    --scroll-hover: rgb(208 196 202 / 70%);
 }

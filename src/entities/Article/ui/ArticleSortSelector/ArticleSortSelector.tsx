@@ -5,6 +5,9 @@ import { Select, SelectOption } from '@/shared/ui/Select/Select';
 import { SortOrder } from '@/shared/types';
 import cls from './ArticleSortSelector.module.scss';
 import { ArticleSortField } from '../../model/consts/articleConsts';
+import { Icon } from '@/shared/ui/Icon/Icon';
+import SortSvg from '@/shared/assets/icons/sort.svg';
+import { HStack } from '@/shared/ui/Stack';
 
 interface ArticleSortSelectorProps {
     className?: string;
@@ -23,43 +26,42 @@ export const ArticleSortSelector = memo((props: ArticleSortSelectorProps) => {
     const orderOptions = useMemo<SelectOption<SortOrder>[]>(() => [
         {
             value: 'asc',
-            content: t('возрастанию'),
+            content: t('По возрастанию'),
         },
         {
             value: 'desc',
-            content: t('убыванию'),
+            content: t('По убыванию'),
         },
     ], [t]);
 
     const sortFieldOptions = useMemo<SelectOption<ArticleSortField>[]>(() => [
         {
             value: ArticleSortField.CREATED,
-            content: t('дате создания'),
+            content: t('По дате создания'),
         },
         {
             value: ArticleSortField.TITLE,
-            content: t('заголовку'),
+            content: t('По алфавиту'),
         },
         {
             value: ArticleSortField.VIEWS,
-            content: t('просмотрам'),
+            content: t('По популярности'),
         },
     ], [t]);
 
     return (
-        <div className={classNames(cls.ArticleSortSelector, {}, [className])}>
+        <HStack gap="20" className={classNames(cls.ArticleSortSelector, {}, [className])}>
+            <Icon Svg={SortSvg} />
             <Select
-                label={t('Сортировать ПО')}
                 options={sortFieldOptions}
                 value={sort}
                 onChange={onChangeSort}
             />
             <Select
-                label={t('по')}
                 options={orderOptions}
                 value={order}
                 onChange={onChangeOrder}
             />
-        </div>
+        </HStack>
     );
 });

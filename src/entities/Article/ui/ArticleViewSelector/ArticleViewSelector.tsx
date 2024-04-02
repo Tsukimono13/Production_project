@@ -8,7 +8,6 @@ import { Icon } from '@/shared/ui/Icon/Icon';
 import { Button, ThemeButton } from '@/shared/ui/Button/Button';
 import cls from './ArticleViewSelector.module.scss';
 import { ArticleView } from '../../model/consts/articleConsts';
-import { Theme, useTheme } from '@/app/providers/ThemeProvider';
 
 interface ArticleViewSelectorProps {
     className?: string;
@@ -30,13 +29,10 @@ const viewTypes = [
 export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
     const { className, view, onViewClick } = props;
     const { t } = useTranslation();
-    const { theme } = useTheme();
 
     const onClick = (newView: ArticleView) => () => {
         onViewClick?.(newView);
     };
-
-    const svgColor = theme === Theme.LIGHT ? [cls.darkSvg] : [cls.lightSvg];
 
     return (
         <div className={classNames(cls.ArticleViewSelector, {}, [className])}>

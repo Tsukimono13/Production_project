@@ -1,10 +1,17 @@
-.sortWrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.ArticlesPageFilters {
+    position: relative;
+}
+
+.view {
+    position: absolute;
+    top: -24px;
+    right: -24px;
 }
 
 .search {
-    margin-top: 16px;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 800px;
+    background-color: var(--card-bg);
+    border-radius: 4px;
+    padding: 10px 16px;
 }

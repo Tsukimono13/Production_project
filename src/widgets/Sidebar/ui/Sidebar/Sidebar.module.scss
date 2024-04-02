@@ -1,5 +1,5 @@
 .Sidebar {
-    //height: calc(100vh - 50px);
+    // height: calc(100vh - 50px);
     height: 304px;
     width: 200px;
     background: var(--content-bg-color);
@@ -30,7 +30,6 @@
 
 .collapsed {
     width: var(--sidebar-width-collapsed);
-
 
     .link {
         opacity: 0;

@@ -1,12 +1,10 @@
-import React, { HTMLAttributeAnchorTarget, memo, useCallback } from 'react';
+import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Text } from '@/shared/ui/Text/Text';
+import { Text, TextSize, TextTheme } from '@/shared/ui/Text/Text';
 import EyeSvg from '@/shared/assets/icons/eye.svg';
-import { Card } from '@/shared/ui/Card/Card';
-import { Avatar } from '@/shared/ui/Avatar/Avatar';
-import { Button, ThemeButton } from '@/shared/ui/Button/Button';
+import CalendarSvg from '@/shared/assets/icons/calendar.svg';
+import { Card, CardTheme } from '@/shared/ui/Card/Card';
 import { RoutePath } from '@/shared/config/routeConfig/RouteConfig';
 import { AppLink } from '@/shared/ui/AppLink/AppLink';
 import cls from './ArticleListItem.module.scss';
@@ -15,6 +13,8 @@ import {
 } from '../../model/types/article';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import { ArticleView, ArticleBlockType } from '../../model/consts/articleConsts';
+import { HStack, VStack } from '@/shared/ui/Stack';
+import { Icon, IconType } from '@/shared/ui/Icon/Icon';
 
 interface ArticleListItemProps {
     className?: string;
@@ -38,28 +38,34 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
         ) as ArticleTextBlock;
         return (
             <div className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}>
-                <Card className={cls.card}>
-                    <div className={cls.header}>
-                        <Avatar size={30} src={article.user.avatar} />
-                        <Text text={article.user.username} className={cls.username} />
-                        <Text text={article.createdAt} className={cls.date} />
-                    </div>
-                    <Text title={article.title} className={cls.title} />
-                    <Text text={article.type.join(', ')} className={cls.types} />
-                    <img src={article.img} alt={article.title} className={cls.img} />
-                    {textBlock && (
-                        <ArticleTextBlockComponent block={textBlock} className={cls.textBlock} />
-                    )}
-                    <div className={cls.footer}>
-                        <AppLink to={RoutePath.article_details + article.id} target={target}>
-                            <Button theme={ThemeButton.OUTLINE}>
-                                {t('Читать далее')}
-                            </Button>
-                        </AppLink>
-                        <Text text={String(article.views)} className={cls.views} />
-                        <EyeSvg width={20} height={20} />
-                    </div>
-                </Card>
+                <AppLink to={RoutePath.article_details + article.id} target={target}>
+                    <Card className={cls.card}>
+                        <img src={article.img} alt={article.title} className={cls.img} />
+                        <VStack className={cls.header} gap="12">
+                            <Text title={article.title} size={TextSize.S} className={cls.title} />
+                            <VStack gap="8">
+                                <HStack gap="8">
+                                    <Icon Svg={CalendarSvg} theme={IconType.SECOND} />
+                                    <Text text={article.createdAt} className={cls.date} />
+                                </HStack>
+                                <HStack gap="8">
+                                    <Icon Svg={EyeSvg} theme={IconType.SECOND} />
+                                    <Text text={String(article.views)} className={cls.views} />
+                                </HStack>
+                            </VStack>
+                            <Card theme={CardTheme.TAG}>
+                                {article.type.join(', ')}
+                            </Card>
+                        </VStack>
+                        {textBlock && (
+                            <ArticleTextBlockComponent
+                                title={false}
+                                block={textBlock}
+                                className={cls.textBlock}
+                            />
+                        )}
+                    </Card>
+                </AppLink>
             </div>
         );
     }

@@ -17,6 +17,10 @@ import {
 import cls from './ArticlesPageFilters.module.scss';
 import { articlesPageActions } from '../../model/slices/articlesPageSlice';
 import { ArticleTypeTabs } from '../../../../entities/Article/ui/ArticleTypeTabs/ArticleTypeTabs';
+import { Text, TextSize } from '@/shared/ui/Text/Text';
+import { HStack, VStack } from '@/shared/ui/Stack';
+import { Icon } from '@/shared/ui/Icon/Icon';
+import SearchSvg from '@/shared/assets/icons/search.svg';
 
 interface ArticlesPageFiltersProps {
     className?: string;
@@ -67,30 +71,31 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
     }, [dispatch, fetchData]);
 
     return (
-        <div className={classNames(cls.ArticlesPageFilters, {}, [className])}>
-            <div className={cls.sortWrapper}>
-                <ArticleSortSelector
-                    sort={sort}
-                    order={order}
-                    onChangeOrder={onChangeOrder}
-                    onChangeSort={onChangeSort}
-                />
-                <ArticleViewSelector
-                    view={view}
-                    onViewClick={onChangeView}
-                />
-            </div>
-            <Card className={cls.search}>
+        <VStack max gap="24" className={classNames(cls.ArticlesPageFilters, {}, [className])}>
+            <Text title={t('Статьи')} size={TextSize.L} />
+            <ArticleViewSelector
+                view={view}
+                onViewClick={onChangeView}
+                className={cls.view}
+            />
+            <HStack max justify="between" className={cls.search}>
                 <Input
-                    placeholder={t('Поиск')}
+                    placeholder={t('Искать статьи')}
                     onChange={onChangeSearch}
                     value={search}
                 />
-            </Card>
+                <Icon Svg={SearchSvg} />
+            </HStack>
             <ArticleTypeTabs
                 value={type}
                 onChangeType={onChangeType}
             />
-        </div>
+            <ArticleSortSelector
+                sort={sort}
+                order={order}
+                onChangeOrder={onChangeOrder}
+                onChangeSort={onChangeSort}
+            />
+        </VStack>
     );
 });

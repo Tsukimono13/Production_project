@@ -6,7 +6,10 @@ import cls from './Card.module.scss';
 
 export enum CardTheme {
     NORMAL = 'normal',
-    OUTLINED = 'outlined'
+    OUTLINED = 'outlined',
+    TAB = 'tab',
+    SELECTED = 'selected',
+    TAG = 'tag',
 }
 
 interface CardProps extends HTMLAttributes<HTMLDivElement>{

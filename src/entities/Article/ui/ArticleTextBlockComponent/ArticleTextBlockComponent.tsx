@@ -9,15 +9,16 @@ import { ArticleTextBlock } from '../../model/types/article';
 interface ArticleTextBlockComponentProps {
     className?: string;
     block: ArticleTextBlock;
+    title?: boolean;
 }
 
 export const ArticleTextBlockComponent = memo((props: ArticleTextBlockComponentProps) => {
-    const { className, block } = props;
+    const { className, block, title = true } = props;
     const { t } = useTranslation();
 
     return (
         <div className={classNames(cls.ArticleTextBlockComponents, {}, [className])}>
-            {block.title && (
+            {title && block.title && (
                 <Text title={block.title} className={cls.title} />
             )}
             {block.paragraphs.map((paragraph) => (

@@ -1,5 +1,5 @@
 .title {
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .text {
@@ -35,6 +35,8 @@
 .size_s {
     .title {
         font-size: var(--font-size-m);
+        line-height: 21px;
+        font-weight: 600;
     }
 
     .text {
@@ -56,6 +58,7 @@
     .title {
         font-size: var(--font-size-xl);
         font-weight: bold;
+        line-height: 16px;
     }
 
     .text {

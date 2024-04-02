@@ -1,6 +1,5 @@
 .Card {
-    padding: 15px;
-    border-radius: 12px;
+    border-radius: 8px;
 }
 
 .normal {
@@ -9,6 +8,28 @@
 
 .outlined {
     border: 1px solid var(--primary-color);
+}
+
+.tab,
+.selected {
+    padding: 8px 20px;
+}
+
+.tab,
+.tag {
+    background-color: var(--tab-color);
+    color: rgb(34 4 19 / 100%);
+}
+
+.selected {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.tag {
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: 400;
 }
 
 .max {
