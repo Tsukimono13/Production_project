@@ -8,7 +8,7 @@ import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDe
 import { NotificationItem } from './NotificationItem';
 
 export default {
-    title: 'entities/NotificationItem',
+    title: 'entities/Notification/NotificationItem',
     component: NotificationItem,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -18,14 +18,21 @@ export default {
 const Template: ComponentStory<typeof NotificationItem> = (args) => <NotificationItem {...args} />;
 
 export const Light = Template.bind({});
-Light.args = {};
-Light.decorators = [StoreDecorator({
-
-})];
+Light.args = {
+    item: {
+        id: '1',
+        title: 'Уведомление',
+        description: 'Остьвьте свой комментарий',
+    },
+};
 
 export const Dark = Template.bind({});
-Dark.args = {};
+Dark.args = {
+    item: {
+        id: '1',
+        title: 'Уведомление',
+        description: 'Остьвьте свой комментарий',
+    },
+};
 
-Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
-
-})];
+Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];

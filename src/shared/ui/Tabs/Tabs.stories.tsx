@@ -15,8 +15,8 @@ export default {
 
 const Template: ComponentStory<typeof Tabs> = (args) => <Tabs {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const Light = Template.bind({});
+Light.args = {
     tabs: [
         {
             value: 'tab 1',
@@ -35,8 +35,8 @@ Primary.args = {
     onTabClick: action('onTabClick'),
 };
 
-export const PrimaryDark = Template.bind({});
-PrimaryDark.args = {
+export const Dark = Template.bind({});
+Dark.args = {
     tabs: [
         {
             value: 'tab 1',
@@ -55,4 +55,4 @@ PrimaryDark.args = {
     onTabClick: action('onTabClick'),
 };
 
-PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)];
+Dark.decorators = [ThemeDecorator(Theme.DARK)];

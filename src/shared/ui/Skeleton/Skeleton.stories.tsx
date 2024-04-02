@@ -35,12 +35,3 @@ Circle.args = {
     width: 100,
     height: 100,
 };
-
-export const PinkTheme = Template.bind({});
-PinkTheme.args = {
-    border: '10px',
-    width: 200,
-    height: 200,
-};
-
-PinkTheme.decorators = [ThemeDecorator(Theme.BRIGHT)];

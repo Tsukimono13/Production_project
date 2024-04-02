@@ -6,9 +6,10 @@ import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDe
 import { Article, ArticleType } from '@/entities/Article';
 import { ArticleBlockType } from '@/entities/Article/model/consts/articleConsts';
 import ArticleDetailsPage from './ArticleDetailsPage';
+import { UserRole } from '@/entities/User';
 
 export default {
-    title: 'pages/ArticleDetailsPage',
+    title: 'pages/ArticlePage/ArticleDetailsPage',
     component: ArticleDetailsPage,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -92,7 +93,9 @@ const article: Article = {
 };
 
 export const Light = Template.bind({});
-Light.args = {};
+Light.args = {
+
+};
 Light.decorators = [StoreDecorator({
     articleDetails: {
         data: article,
@@ -102,14 +105,6 @@ Light.decorators = [StoreDecorator({
 export const Dark = Template.bind({});
 Dark.args = {};
 Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
-    articleDetails: {
-        data: article,
-    },
-})];
-
-export const Color = Template.bind({});
-Color.args = {};
-Color.decorators = [ThemeDecorator(Theme.BRIGHT), StoreDecorator({
     articleDetails: {
         data: article,
     },

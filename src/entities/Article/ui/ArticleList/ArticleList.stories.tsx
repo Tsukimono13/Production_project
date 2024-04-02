@@ -21,7 +21,7 @@ const article = {
     id: '1',
     title: 'Javascript news',
     subtitle: 'Что нового в JS за 2022 год?',
-    img: 'https://cdn2.iconfinder.com/data/icons/designer-skills/128/code-programming-javascript-software-develop-command-language-1024.png',
+    img: 'https://2.bp.blogspot.com/-4XUrh8iW7fI/WiALo6VhVFI/AAAAAAAAAG4/lroEujFE3xET5TUDmJ9kuDEU6ldznRdZACLcBGAs/s1600/post-javascript-closures.png',
     views: 1022,
     createdAt: '26.02.2022',
     user: {

@@ -8,7 +8,7 @@ import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDe
 import ArticlePage from './ArticlePage';
 
 export default {
-    title: 'pages/Article/ArticlePage',
+    title: 'pages/ArticlePage/ArticlePage',
     component: ArticlePage,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -18,12 +18,12 @@ export default {
 
 const Template: ComponentStory<typeof ArticlePage> = (args) => <ArticlePage {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const Light = Template.bind({});
+Light.args = {
 };
 
-export const PrimaryDark = Template.bind({});
-PrimaryDark.args = {
+export const Dark = Template.bind({});
+Dark.args = {
 };
 
-PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)];
+Dark.decorators = [ThemeDecorator(Theme.DARK)];

@@ -27,10 +27,3 @@ Dark.args = {
 };
 
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
-
-export const Pink = Template.bind({});
-Pink.args = {
-    children: <Text title="lorem lorem" text="remon kokem borem" marginT={10} />,
-};
-
-Pink.decorators = [ThemeDecorator(Theme.BRIGHT)];

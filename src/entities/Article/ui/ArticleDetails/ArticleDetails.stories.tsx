@@ -8,7 +8,7 @@ import { ArticleType, ArticleBlockType } from '../../model/consts/articleConsts'
 import { Article } from '../../model/types/article';
 
 export default {
-    title: 'entities/ArticleDetails',
+    title: 'entities/Article/ArticleDetails',
     component: ArticleDetails,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -102,14 +102,6 @@ Light.decorators = [StoreDecorator({
 export const Dark = Template.bind({});
 Dark.args = {};
 Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
-    articleDetails: {
-        data: article,
-    },
-})];
-
-export const Color = Template.bind({});
-Color.args = {};
-Color.decorators = [ThemeDecorator(Theme.BRIGHT), StoreDecorator({
     articleDetails: {
         data: article,
     },

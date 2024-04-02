@@ -3,9 +3,11 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import ArticleEditPage from './ArticleEditPage';
+import { Theme } from '@/app/providers/ThemeProvider';
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 
 export default {
-    title: 'features/ArticleEditPage/ArticleEditPage',
+    title: 'features/ArticleEditPage',
     component: ArticleEditPage,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -15,5 +17,10 @@ export default {
 
 const Template: ComponentStory<typeof ArticleEditPage> = (args) => <ArticleEditPage />;
 
-export const Normal = Template.bind({});
-Normal.args = {};
+export const Light = Template.bind({});
+Light.args = {};
+
+export const Dark = Template.bind({});
+Dark.args = {
+};
+Dark.decorators = [StoreDecorator({}), ThemeDecorator(Theme.DARK)];
