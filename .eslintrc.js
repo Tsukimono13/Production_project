@@ -61,6 +61,7 @@ module.exports = {
         'react/no-array-index-key': 'off',
         'arrow-body-style': 'off',
         'tsuki-prod-plugin/path-checker': ['error', { alias: '@' }],
+        'tsuki-prod-plugin/public-api-imports': ['error', { alias: '@' }],
         '@typescript-eslint/no-unused-vars': [
             'warn',
             { argsIgnorePattern: '^_' },

@@ -6,6 +6,7 @@ export {
     ArticleView,
     ArticleType,
     ArticleSortField,
+    ArticleBlockType,
 } from './model/consts/articleConsts';
 
 export type {

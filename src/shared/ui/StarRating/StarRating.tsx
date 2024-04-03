@@ -1,5 +1,4 @@
 import { memo, useState } from 'react';
-import { Mode } from 'fs';
 import { Icon } from '../Icon/Icon';
 import StarIcon from '@/shared/assets/icons/star.svg';
 import cls from './StarRating.module.scss';

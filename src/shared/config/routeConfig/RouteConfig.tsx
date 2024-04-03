@@ -5,10 +5,10 @@ import { AdminPanelPage } from '@/pages/AdminPanelPage';
 import { ArticleDetailsPage } from '@/pages/ArticleDetailsPage';
 import { ArticleEditPage } from '@/pages/ArticleEditPage';
 import { ArticlePage } from '@/pages/ArticlesPage';
-import ForbiddenPage from '@/pages/ForbiddenPage/ui/ForbiddenPage';
 import { MainPage } from '@/pages/MainPage';
 import { NotFoundPage } from '@/pages/NotFoundPage';
 import { ProfilePage } from '@/pages/ProfilePage';
+import { ForbiddenPage } from '@/pages/ForbiddenPage';
 
 export type AppRoutersProps = RouteProps & {
     authOnly?: boolean;
