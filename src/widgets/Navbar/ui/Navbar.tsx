@@ -8,7 +8,7 @@ import { LoginModal } from '@/features/AuthByUsername';
 import {
     getUserData,
 } from '@/entities/User';
-import { RoutePath } from '@/shared/config/routeConfig/RouteConfig';
+import { RoutePath } from '@/shared/const/router';
 import { HStack } from '@/shared/ui/Stack';
 import { NotificationButton } from '@/features/notificationButton';
 import { AvatarDropdown } from '@/features/avatarDropdown';

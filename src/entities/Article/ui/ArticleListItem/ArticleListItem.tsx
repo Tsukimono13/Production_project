@@ -5,7 +5,7 @@ import { Text, TextSize, TextTheme } from '@/shared/ui/Text/Text';
 import EyeSvg from '@/shared/assets/icons/eye.svg';
 import CalendarSvg from '@/shared/assets/icons/calendar.svg';
 import { Card, CardTheme } from '@/shared/ui/Card/Card';
-import { RoutePath } from '@/shared/config/routeConfig/RouteConfig';
+import { RoutePath } from '@/shared/const/router';
 import { AppLink } from '@/shared/ui/AppLink/AppLink';
 import cls from './ArticleListItem.module.scss';
 import {
