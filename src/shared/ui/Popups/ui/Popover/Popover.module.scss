@@ -1,8 +1,8 @@
 .panel {
-    background-color: var(--card-bg);
+    background-color: white;
     position: absolute;
     z-index: 10000;
-    border-radius: 8px;
-    border: 1px solid var(--primary-color);
+    border-radius: 4px;
     padding: 10px;
+    box-shadow: 0 0 10px rgb(34 4 19 / 10%);
 }

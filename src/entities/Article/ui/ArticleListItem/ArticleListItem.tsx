@@ -77,16 +77,25 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
             className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
         >
             <Card>
-                <div className={cls.imageWrapper}>
-                    <img src={article.img} className={cls.img} alt={article.title} />
-                    <Text text={article.createdAt} className={cls.date} />
+                <img src={article.img} className={cls.img} alt={article.title} />
+                <div className={cls.contentWrapper}>
+                    <Text text={article.title} className={cls.title} size={TextSize.M} />
+                    <HStack justify="between">
+                        <HStack gap="8">
+                            <Icon Svg={CalendarSvg} theme={IconType.SECOND} />
+                            <Text text={article.createdAt} className={cls.date} />
+                        </HStack>
+                        <HStack gap="8">
+                            <Icon Svg={EyeSvg} theme={IconType.SECOND} />
+                            <Text text={String(article.views)} className={cls.views} />
+                        </HStack>
+                    </HStack>
+                    <HStack gap="4">
+                        <Card theme={CardTheme.TAG} className={cls.types}>
+                            {article.type.join(', ')}
+                        </Card>
+                    </HStack>
                 </div>
-                <div className={cls.infoWrapper}>
-                    <Text text={article.type.join(', ')} className={cls.types} />
-                    <Text text={String(article.views)} className={cls.views} />
-                    <EyeSvg width={20} height={20} />
-                </div>
-                <Text text={article.title} className={cls.title} />
             </Card>
         </AppLink>
     );

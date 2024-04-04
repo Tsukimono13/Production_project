@@ -5,7 +5,8 @@ import cls from './Text.module.scss';
 export enum TextTheme {
  PRIMARY = 'primary',
  ERROR = 'error',
- INVERTED = 'inverted'
+ INVERTED = 'inverted',
+ BLACK = 'black'
 }
 
 export enum TextAlign {
@@ -15,6 +16,7 @@ export enum TextAlign {
 }
 
 export enum TextSize {
+    XS = 'size_xs',
     S = 'size_s',
     M = 'size_m',
     L = 'size_l',
@@ -32,9 +34,10 @@ interface TextProps {
   'data-testid'?: string;
 }
 
-type HeaderTagType = 'h1' | 'h2' | 'h3';
+type HeaderTagType = 'h1' | 'h2' | 'h3' | 'h4';
 
 const mapSizeToHeaderTag: Record<TextSize, HeaderTagType> = {
+    [TextSize.XS]: 'h4',
     [TextSize.S]: 'h3',
     [TextSize.M]: 'h2',
     [TextSize.L]: 'h1',

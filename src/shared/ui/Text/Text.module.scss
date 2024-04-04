@@ -20,6 +20,13 @@
     }
 }
 
+.black {
+    .text,
+    .title {
+        color: black;
+    }
+}
+
 .left {
     text-align: left;
 }
@@ -30,6 +37,18 @@
 
 .center {
     text-align: center;
+}
+
+.size_xs {
+    .title {
+        font-size: var(--font-size-s);
+        font-weight: 500;
+    }
+
+    .text {
+        font-size: var(--font-size-xs);
+        font-weight: 500;
+    }
 }
 
 .size_s {
