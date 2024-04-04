@@ -1,7 +1,7 @@
 .NotFoundPage {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: var(--font-l);
-    height: 100%;
+    img {
+        max-width: 524px;
+        max-height: 292px;
+        margin: 92px 0 68px;
+    }
 }

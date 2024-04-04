@@ -83,3 +83,17 @@
         font-size: var(--font-size-l);
     }
 }
+
+.size_xl {
+    .title {
+        font-size: var(--font-size-xxl);
+        font-weight: 700;
+        font-weight: bold;
+        line-height: 100%;
+    }
+
+    .text {
+        font-size: var(--font-size-l);
+        font-weight: 500;
+    }
+}

@@ -1,8 +1,10 @@
 .Button {
     cursor: pointer;
     color: var(--primary-color);
-    padding: 10px 15px;
-    border-radius: 10px;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: 500;
+    line-height: 16px;
 
     &:hover {
         color: var(--hover-btn);
@@ -40,8 +42,8 @@
 }
 
 .backgroundInverted {
-    background-color: var(--inverted-bg-color);
     color: var(--inverted-primary-color);
+    background-color: var(--primary-color);
     border: none;
 }
 

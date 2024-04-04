@@ -1,12 +1,14 @@
 import { useTranslation } from 'react-i18next';
 import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Text, TextSize } from '@/shared/ui/Text/Text';
+import { Text, TextAlign, TextSize } from '@/shared/ui/Text/Text';
 import { ArticleView } from '../../model/consts/articleConsts';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import cls from './ArticleList.module.scss';
 import { Article } from '../../model/types/article';
+import NotFound from '@/shared/assets/images/not_found.png';
+import { HStack, VStack } from '@/shared/ui/Stack';
 
 interface ArticleListProps {
     className?: string;
@@ -35,7 +37,16 @@ export const ArticleList = memo((props: ArticleListProps) => {
     if (!isLoading && !articles.length) {
         return (
             <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
-                <Text size={TextSize.L} title={t('Статьи не найдены')} />
+                <VStack justify="center" align="center" max>
+                    <img src={NotFound} alt={t('Мы ничего не нашли')} className={cls.notFoundImg} />
+                    <Text
+                        title={t('Мы ничего не нашли')}
+                        text={t('Попробуйте поискать что-то еще интересное.')}
+                        size={TextSize.XL}
+                        align={TextAlign.CENTER}
+                        className={cls.notFoundTitle}
+                    />
+                </VStack>
             </div>
         );
     }

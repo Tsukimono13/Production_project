@@ -1,15 +1,18 @@
 import { useTranslation } from 'react-i18next';
 import { useCallback } from 'react';
 import { useSelector } from 'react-redux';
-import { Text } from '@/shared/ui/Text/Text';
+import { Text, TextSize } from '@/shared/ui/Text/Text';
 import { getUserData } from '@/entities/User';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Button, ThemeButton } from '@/shared/ui/Button/Button';
-import { HStack } from '@/shared/ui/Stack';
+import { HStack, VStack } from '@/shared/ui/Stack';
 import { profileActions } from '../../model/slice/profileSlice';
 import { updateProfileData } from '../../model/services/updateProfileData/updateProfileData';
 import { getProfileReadOnly } from '../../model/selectors/getProfileReadonly/getProfileReadonly';
 import { getProfileData } from '../../model/selectors/getProfileData/getProfileData';
+import EditSvg from '@/shared/assets/icons/edit.svg';
+import { Icon } from '@/shared/ui/Icon/Icon';
+import cls from './EditableProfileHeaderCard.module.scss';
 
 interface EditableProfileHeaderCardProps {
     className?: string;
@@ -36,38 +39,40 @@ export const EditableProfileHeaderCard = ({ className } : EditableProfileHeaderC
     }, [dispatch]);
 
     return (
-        <HStack justify="between" max>
-            <Text title={t('Профиль')} />
+        <VStack max>
+            <Text title={t('Профиль')} size={TextSize.L} />
             {canEdit && (
                 <div>
                     {readonly ? (
-                        <Button
-                            theme={ThemeButton.BACKGROUND_INVERTED}
-                            onClick={onEdit}
-                            data-testid="EditableProfileHeaderCard.EditButton"
-                        >
-                            {t('Редактировать')}
-                        </Button>
-                    ) : (
-                        <HStack gap="8">
+                        <HStack gap="8" className={cls.containerBtn}>
+                            <Icon Svg={EditSvg} />
                             <Button
-                                theme={ThemeButton.OUTLINE_RED}
-                                onClick={onCancelEdit}
-                                data-testid="EditableProfileHeaderCard.CancelButton"
+                                theme={ThemeButton.CLEAR}
+                                onClick={onEdit}
+                                data-testid="EditableProfileHeaderCard.EditButton"
                             >
-                                {t('Отменить')}
+                                {t('Редактировать')}
                             </Button>
+                        </HStack>
+                    ) : (
+                        <HStack gap="16" className={cls.containerBtn}>
                             <Button
-                                theme={ThemeButton.OUTLINE}
+                                theme={ThemeButton.BACKGROUND_INVERTED}
                                 onClick={onSave}
                                 data-testid="EditableProfileHeaderCard.SaveButton"
                             >
                                 {t('Сохранить')}
                             </Button>
+                            <Button
+                                onClick={onCancelEdit}
+                                data-testid="EditableProfileHeaderCard.CancelButton"
+                            >
+                                {t('Отменить')}
+                            </Button>
                         </HStack>
                     )}
                 </div>
             )}
-        </HStack>
+        </VStack>
     );
 };
