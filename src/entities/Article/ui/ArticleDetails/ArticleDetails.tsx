@@ -4,14 +4,10 @@ import { useSelector } from 'react-redux';
 import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import {
-    Text, TextAlign, TextSize, TextTheme,
-} from '@/shared/ui/Text/Text';
-import { Skeleton } from '@/shared/ui/Skeleton/Skeleton';
-import { Avatar } from '@/shared/ui/Avatar/Avatar';
+
 import EyeSvg from '@/shared/assets/icons/eye.svg';
 import CalendarSvg from '@/shared/assets/icons/calendar.svg';
-import { HStack, VStack } from '@/shared/ui/Stack';
+
 import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice';
 import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById';
 import {
@@ -25,6 +21,12 @@ import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleC
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import { ArticleBlockType } from '../../model/consts/articleConsts';
+import { Avatar } from '@/shared/ui/Avatar';
+import { Skeleton } from '@/shared/ui/Skeleton';
+import { VStack, HStack } from '@/shared/ui/Stack';
+import {
+    TextAlign, TextTheme, TextSize, Text,
+} from '@/shared/ui/Text';
 
 const reducers: ReducersList = {
     articleDetails: articleDetailsReducer,

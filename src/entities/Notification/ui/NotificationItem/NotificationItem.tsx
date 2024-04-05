@@ -1,10 +1,8 @@
 import { memo } from 'react';
-import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Card, CardTheme } from '@/shared/ui/Card/Card';
-import { Text, TextSize, TextTheme } from '@/shared/ui/Text/Text';
 import { Notification } from '../../model/types/notification';
 import cls from './NotificationItem.module.scss';
+import { Text, TextSize, TextTheme } from '@/shared/ui/Text';
 
 interface NotificationItemProps {
     className?: string;

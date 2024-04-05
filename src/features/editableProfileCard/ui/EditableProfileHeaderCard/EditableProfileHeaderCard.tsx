@@ -1,18 +1,18 @@
 import { useTranslation } from 'react-i18next';
 import { useCallback } from 'react';
 import { useSelector } from 'react-redux';
-import { Text, TextSize } from '@/shared/ui/Text/Text';
 import { getUserData } from '@/entities/User';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { Button, ThemeButton } from '@/shared/ui/Button/Button';
-import { HStack, VStack } from '@/shared/ui/Stack';
 import { profileActions } from '../../model/slice/profileSlice';
 import { updateProfileData } from '../../model/services/updateProfileData/updateProfileData';
 import { getProfileReadOnly } from '../../model/selectors/getProfileReadonly/getProfileReadonly';
 import { getProfileData } from '../../model/selectors/getProfileData/getProfileData';
 import EditSvg from '@/shared/assets/icons/edit.svg';
-import { Icon } from '@/shared/ui/Icon/Icon';
 import cls from './EditableProfileHeaderCard.module.scss';
+import { Button, ThemeButton } from '@/shared/ui/Button';
+import { Icon } from '@/shared/ui/Icon';
+import { VStack, HStack } from '@/shared/ui/Stack';
+import { TextSize, Text } from '@/shared/ui/Text';
 
 interface EditableProfileHeaderCardProps {
     className?: string;

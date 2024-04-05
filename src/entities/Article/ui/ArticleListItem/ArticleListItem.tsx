@@ -1,20 +1,20 @@
 import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Text, TextSize, TextTheme } from '@/shared/ui/Text/Text';
 import EyeSvg from '@/shared/assets/icons/eye.svg';
 import CalendarSvg from '@/shared/assets/icons/calendar.svg';
-import { Card, CardTheme } from '@/shared/ui/Card/Card';
 import { RoutePath } from '@/shared/const/router';
-import { AppLink } from '@/shared/ui/AppLink/AppLink';
 import cls from './ArticleListItem.module.scss';
 import {
     Article, ArticleTextBlock,
 } from '../../model/types/article';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import { ArticleView, ArticleBlockType } from '../../model/consts/articleConsts';
-import { HStack, VStack } from '@/shared/ui/Stack';
-import { Icon, IconType } from '@/shared/ui/Icon/Icon';
+import { AppLink } from '@/shared/ui/AppLink';
+import { Card, CardTheme } from '@/shared/ui/Card';
+import { Icon, IconType } from '@/shared/ui/Icon';
+import { VStack, HStack } from '@/shared/ui/Stack';
+import { TextSize, Text } from '@/shared/ui/Text';
 
 interface ArticleListItemProps {
     className?: string;

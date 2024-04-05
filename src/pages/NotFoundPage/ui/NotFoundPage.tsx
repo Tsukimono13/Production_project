@@ -4,8 +4,8 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { Page } from '@/widgets/Page';
 import cls from './NotFoundPage.module.scss';
 import NotFound from '@/shared/assets/images/not_found_page.png';
-import { Text, TextAlign, TextSize } from '@/shared/ui/Text/Text';
 import { VStack } from '@/shared/ui/Stack';
+import { TextAlign, TextSize, Text } from '@/shared/ui/Text';
 
 interface NotFoundPageProps {
     className?: string;

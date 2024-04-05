@@ -6,7 +6,7 @@ import {
 } from '@/entities/Article';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Input } from '@/shared/ui/Input/Input';
+
 import { SortOrder } from '@/shared/types';
 import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
@@ -16,10 +16,11 @@ import {
 import cls from './ArticlesPageFilters.module.scss';
 import { articlesPageActions } from '../../model/slices/articlesPageSlice';
 import { ArticleTypeTabs } from '../../../../entities/Article/ui/ArticleTypeTabs/ArticleTypeTabs';
-import { Text, TextSize } from '@/shared/ui/Text/Text';
-import { HStack, VStack } from '@/shared/ui/Stack';
-import { Icon } from '@/shared/ui/Icon/Icon';
+import { Text, TextSize } from '@/shared/ui/Text';
 import SearchSvg from '@/shared/assets/icons/search.svg';
+import { Icon } from '@/shared/ui/Icon';
+import { Input } from '@/shared/ui/Input';
+import { VStack, HStack } from '@/shared/ui/Stack';
 
 interface ArticlesPageFiltersProps {
     className?: string;

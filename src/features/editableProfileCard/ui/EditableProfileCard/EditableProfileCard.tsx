@@ -10,9 +10,7 @@ import {
 } from '@/entities/Profile';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
-import { Text, TextTheme } from '@/shared/ui/Text/Text';
 import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { VStack } from '@/shared/ui/Stack';
 import {
     profileReducer,
     profileActions,
@@ -25,6 +23,8 @@ import { getProfileValidateErrors } from '../../model/selectors/getProfileValida
 import { fetchProfileData } from '../../model/services/fetchProfileData/fetchProfileData';
 import { EditableProfileHeaderCard } from '../EditableProfileHeaderCard/EditableProfileHeaderCard';
 import { ValidateProfileError } from '../../model/consts/consts';
+import { VStack } from '@/shared/ui/Stack';
+import { TextTheme, Text } from '@/shared/ui/Text';
 
 interface EditableProfileCardProps {
     className?: string;
