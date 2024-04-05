@@ -23,6 +23,7 @@ module.exports = {
         'i18next',
         'react-hooks',
         'tsuki-prod-plugin',
+        'unused-imports',
     ],
     rules: {
         'react/jsx-indent': [2, 4],
@@ -32,6 +33,7 @@ module.exports = {
             { extensions: ['.js', '.jsx', '.tsx'] },
         ],
         'import/no-unresolved': 'off',
+        'unused-imports/no-unused-imports': 'error',
         'import/prefer-default-export': 'off',
         // 'no-unused-vars': 'warn',
         'react/require-default-props': 'off',

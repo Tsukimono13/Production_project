@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
-import { classNames } from '@/shared/lib/classNames/classNames';
 import { Button, ThemeButton } from '@/shared/ui/Button';
 import EnSvg from '@/shared/assets/icons/en.svg';
 import RuSvg from '@/shared/assets/icons/ru.svg';

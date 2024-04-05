@@ -1,4 +1,4 @@
-import React, { ReactNode, memo, useCallback } from 'react';
+import React, { memo, useCallback } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import CopySvg from '@/shared/assets/icons/copy.svg';
 import cls from './Code.module.scss';
