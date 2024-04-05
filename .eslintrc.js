@@ -61,10 +61,20 @@ module.exports = {
         'react/no-array-index-key': 'off',
         'arrow-body-style': 'off',
         'tsuki-prod-plugin/path-checker': ['error', { alias: '@' }],
-        'tsuki-prod-plugin/public-api-imports': ['error', {
-            alias: '@',
-            testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoryDecorator.tsx'],
-        }],
+        'tsuki-prod-plugin/public-api-imports': [
+            'error',
+            {
+                alias: '@',
+                testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
+            },
+        ],
+        'tsuki-prod-plugin/layer-imports': [
+            'error',
+            {
+                alias: '@',
+                ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+            },
+        ],
         '@typescript-eslint/no-unused-vars': [
             'warn',
             { argsIgnorePattern: '^_' },

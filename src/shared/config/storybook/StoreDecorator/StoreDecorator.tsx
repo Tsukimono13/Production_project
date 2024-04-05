@@ -1,4 +1,3 @@
-/* eslint-disable tsuki-prod-plugin/public-api-imports */
 import { Story } from '@storybook/react';
 import { StateSchema, StoreProvider } from '@/app/providers/StoreProvider';
 import { loginReducer } from '@/features/AuthByUsername/testing';
@@ -6,14 +5,13 @@ import { ReducersList } from '@/shared/lib/components/DynamicModuleLoader/Dynami
 import { articleDetailsReducer } from '@/entities/Article/testing';
 import { addCommentsFormReducer } from '@/features/addCommentForm/testing';
 import { profileReducer } from '@/features/editableProfileCard/testing';
-import { articleDetailsPageReducers } from '@/pages/ArticleDetailsPage/model/slices';
 
 const defaultAsyncReducers: ReducersList = {
     loginForm: loginReducer,
     profile: profileReducer,
     articleDetails: articleDetailsReducer,
     addCommentForm: addCommentsFormReducer,
-    articleDetailsPage: articleDetailsPageReducers,
+    articleDetailsPage: articleDetailsReducer,
 };
 
 export const StoreDecorator = (

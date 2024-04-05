@@ -1,8 +1,7 @@
 import { memo, useMemo, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { ThemeSwitcher } from '@/widgets/ThemeSwitcher';
-import { LangSwitcher } from '@/widgets/LangSwitcher';
+import { LangSwitcher } from '@/features/LangSwitcher';
 import { Button, ThemeButton } from '@/shared/ui/Button/Button';
 import { VStack } from '@/shared/ui/Stack/VStack/VStack';
 import cls from './Sidebar.module.scss';
@@ -13,6 +12,7 @@ import CloseSvg from '@/shared/assets/icons/right.svg';
 import { Icon } from '@/shared/ui/Icon/Icon';
 import ChangeSvg from '@/shared/assets/icons/change.svg';
 import { HStack } from '@/shared/ui/Stack';
+import { ThemeSwitcher } from '@/features/ThemeSwitcher';
 
 interface SidebarProps {
   className?: string;
