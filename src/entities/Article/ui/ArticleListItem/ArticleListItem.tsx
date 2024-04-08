@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import EyeSvg from '@/shared/assets/icons/eye.svg';
 import CalendarSvg from '@/shared/assets/icons/calendar.svg';
-import { RoutePath } from '@/shared/const/router';
+import { getRouteArticleDetails } from '@/shared/const/router';
 import cls from './ArticleListItem.module.scss';
 import {
     Article, ArticleTextBlock,
@@ -38,7 +38,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
         ) as ArticleTextBlock;
         return (
             <div className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}>
-                <AppLink to={RoutePath.article_details + article.id} target={target}>
+                <AppLink to={getRouteArticleDetails(article.id)} target={target}>
                     <Card className={cls.card}>
                         <img src={article.img} alt={article.title} className={cls.img} />
                         <VStack className={cls.header} gap="12">
@@ -73,7 +73,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
     return (
         <AppLink
             target={target}
-            to={RoutePath.article_details + article.id}
+            to={getRouteArticleDetails(article.id)}
             className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
         >
             <Card>

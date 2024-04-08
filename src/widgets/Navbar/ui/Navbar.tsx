@@ -6,7 +6,7 @@ import { LoginModal } from '@/features/AuthByUsername';
 import {
     getUserData,
 } from '@/entities/User';
-import { RoutePath } from '@/shared/const/router';
+import { getRouteArticleCreate, getRouteMain } from '@/shared/const/router';
 import { NotificationButton } from '@/features/notificationButton';
 import { AvatarDropdown } from '@/features/avatarDropdown';
 import cls from './Navbar.module.scss';
@@ -36,12 +36,12 @@ export const Navbar = memo(({ className }: NavbarProps) => {
     if (authData) {
         return (
             <header className={classNames(cls.navbar, {}, [className])}>
-                <AppLink to={RoutePath.main}>
+                <AppLink to={getRouteMain()}>
                     <Icon Svg={LogoSvg} className={cls.logo} />
                 </AppLink>
                 <HStack gap="12" className={cls.actions}>
                     <AppLink
-                        to={RoutePath.article_create}
+                        to={getRouteArticleCreate()}
                         theme={AppLinkTheme.BORDER}
                         className={cls.createBtn}
                     >

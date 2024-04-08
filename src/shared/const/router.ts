@@ -1,4 +1,4 @@
-export enum AppRouters {
+export enum AppRoutes {
     MAIN = 'main',
     ABOUT = 'about',
     PROFILE = 'profile',
@@ -8,20 +8,16 @@ export enum AppRouters {
     ARTICLE_EDIT = 'article_edit',
     ADMIN_PANEL = 'admin_panel',
     FORBIDDEN = 'forbidden',
-
     // last
     NOT_FOUND = 'not_found'
 }
 
-export const RoutePath: Record<AppRouters, string> = {
-    [AppRouters.MAIN]: '/',
-    [AppRouters.ABOUT]: '/about',
-    [AppRouters.NOT_FOUND]: '*',
-    [AppRouters.PROFILE]: '/profile/', // + :id
-    [AppRouters.ARTICLES]: '/articles',
-    [AppRouters.ARTICLE_DETAILS]: '/articles/', // + :id
-    [AppRouters.ARTICLE_CREATE]: '/articles/new',
-    [AppRouters.ARTICLE_EDIT]: '/articles/:id/edit',
-    [AppRouters.ADMIN_PANEL]: '/admin',
-    [AppRouters.FORBIDDEN]: '/forbidden',
-};
+export const getRouteMain = () => '/';
+export const getRouteAbout = () => '/about';
+export const getRouteProfile = (id: string) => `/profile/${id}`;
+export const getRouteArticles = () => '/articles';
+export const getRouteArticleDetails = (id: string) => `/articles/${id}`;
+export const getRouteArticleCreate = () => '/articles/new';
+export const getRouteArticleEdit = (id: string) => `/articles/${id}/edit`;
+export const getRouteAdmin = () => '/admin';
+export const getRouteForbidden = () => '/forbidden';
