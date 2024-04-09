@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { SortOrder } from '@/shared/types';
 import cls from './ArticleSortSelector.module.scss';
-import { ArticleSortField } from '../../model/consts/articleConsts';
+import { ArticleSortField } from '@/entities/Article';
 
 import SortSvg from '@/shared/assets/icons/sort.svg';
 import { Icon } from '@/shared/ui/Icon';
