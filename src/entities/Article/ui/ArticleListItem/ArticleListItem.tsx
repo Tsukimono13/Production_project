@@ -15,6 +15,8 @@ import { Card, CardTheme } from '@/shared/ui/Card';
 import { Icon, IconType } from '@/shared/ui/Icon';
 import { VStack, HStack } from '@/shared/ui/Stack';
 import { TextSize, Text } from '@/shared/ui/Text';
+import { AppImage } from '@/shared/ui/AppImage';
+import { Skeleton } from '@/shared/ui/Skeleton';
 
 interface ArticleListItemProps {
     className?: string;
@@ -40,7 +42,12 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
             <div className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}>
                 <AppLink to={getRouteArticleDetails(article.id)} target={target}>
                     <Card className={cls.card}>
-                        <img src={article.img} alt={article.title} className={cls.img} />
+                        <AppImage
+                            fallback={<Skeleton width="100%" height={250} />}
+                            src={article.img}
+                            alt={article.title}
+                            className={cls.img}
+                        />
                         <VStack className={cls.header} gap="12">
                             <Text title={article.title} size={TextSize.S} className={cls.title} />
                             <VStack gap="8">
@@ -77,7 +84,12 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
             className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
         >
             <Card>
-                <img src={article.img} className={cls.img} alt={article.title} />
+                <AppImage
+                    fallback={<Skeleton width={200} height={200} />}
+                    src={article.img}
+                    className={cls.img}
+                    alt={article.title}
+                />
                 <div className={cls.contentWrapper}>
                     <Text text={article.title} className={cls.title} size={TextSize.M} />
                     <HStack justify="between">
