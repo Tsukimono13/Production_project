@@ -3,10 +3,9 @@
  * https://jestjs.io/docs/configuration
  */
 
-import { InitialOptions } from '@jest/types/build/Config';
 import path from 'path';
 
-const config: InitialOptions = {
+export default {
     globals: {
         __IS_DEV__: true,
         __API__: '',
@@ -39,6 +38,7 @@ const config: InitialOptions = {
     rootDir: '../../',
     setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
     moduleNameMapper: {
+        '.+\\.(png|jpg|ttf|woff|woff2)$': 'identity-obj-proxy',
         '\\.s?css$': 'identity-obj-proxy',
         '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
         '^@/(.*)$': '<rootDir>/src/$1',
@@ -205,5 +205,3 @@ const config: InitialOptions = {
     // Whether to use watchman for file crawling
     // watchman: true,
 };
-
-export default config;

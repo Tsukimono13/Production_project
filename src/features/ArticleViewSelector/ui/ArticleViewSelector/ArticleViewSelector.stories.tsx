@@ -17,7 +17,7 @@ const Template: ComponentStory<typeof ArticleViewSelector> = (args) => <ArticleV
 
 export const Normal = Template.bind({});
 Normal.args = {
-   
+
 };
 
 export const Dark = Template.bind({});
