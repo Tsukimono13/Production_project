@@ -2,7 +2,6 @@ import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { SortOrder } from '@/shared/types/sort';
-import cls from './ArticleSortSelector.module.scss';
 import { ArticleSortField } from '@/entities/Article';
 import SortSvg from '@/shared/assets/icons/sort.svg';
 import { Icon } from '@/shared/ui/Icon';
@@ -50,7 +49,7 @@ export const ArticleSortSelector = memo((props: ArticleSortSelectorProps) => {
     ], [t]);
 
     return (
-        <HStack gap="20" className={classNames(cls.ArticleSortSelector, {}, [className])}>
+        <HStack gap="20" className={classNames('', {}, [className])}>
             <Icon Svg={SortSvg} />
             <Select
                 options={sortFieldOptions}
