@@ -19,7 +19,7 @@ export const NotificationItem = memo((props: NotificationItemProps) => {
             <Text
                 title={item.title}
                 text={item.description}
-                theme={TextTheme.BLACK}
+                theme={TextTheme.INVERTED}
                 size={TextSize.XS}
             />
         </div>

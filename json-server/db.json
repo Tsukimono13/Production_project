@@ -1092,6 +1092,15 @@
         "MANAGER"
       ],
       "avatar": "https://p7.hiclipart.com/preview/435/40/972/5bbe8cd074088.jpg"
+    },
+    {
+      "id": "4",
+      "username": "testuser",
+      "password": "123",
+      "roles": [
+        "ADMIN"
+      ],
+      "avatar": "https://p7.hiclipart.com/preview/435/40/972/5bbe8cd074088.jpg"
     }
   ],
   "profile": [

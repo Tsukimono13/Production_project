@@ -14,7 +14,7 @@ interface NotFoundPageProps {
 const NotFoundPage = ({ className } : NotFoundPageProps) => {
     const { t } = useTranslation();
     return (
-        <Page className={classNames(cls.NotFoundPage, {}, [className])} data-testid="NotFoundPage">
+        <Page data-testid="NotFoundPage" className={classNames(cls.NotFoundPage, {}, [className])}>
             <VStack max justify="center" align="center">
                 <img src={NotFound} alt={t('Грустный кот')} />
                 <Text
