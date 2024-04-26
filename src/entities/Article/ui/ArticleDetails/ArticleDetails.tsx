@@ -119,7 +119,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
                     marginT={15}
                     size={TextSize.L}
                 />
-                <HStack gap="16">
+                <HStack gap="16" data-testid="ArticleDetails.Info">
                     <HStack gap="8">
                         <EyeSvg width={24} height={24} />
                         <Text text={String(article?.views)} />

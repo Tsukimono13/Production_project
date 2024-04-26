@@ -78,11 +78,11 @@ export const ProfileCard = (props: ProfileCardProps) => {
                 </HStack>
             )}
             <Input
+                data-testid="ProfileCard.firstName"
                 value={data?.first}
                 placeholder={t('Ваше имя')}
                 onChange={onChangeFirstname}
                 readonly={readonly}
-                data-testid="ProfileCard.firstName"
             />
             <Input
                 value={data?.lastname}

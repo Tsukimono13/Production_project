@@ -47,9 +47,9 @@ export const EditableProfileHeaderCard = ({ className } : EditableProfileHeaderC
                         <HStack gap="8" className={cls.containerBtn}>
                             <Icon Svg={EditSvg} />
                             <Button
+                                data-testid="EditableProfileHeaderCard.EditButton"
                                 theme={ThemeButton.CLEAR}
                                 onClick={onEdit}
-                                data-testid="EditableProfileHeaderCard.EditButton"
                             >
                                 {t('Редактировать')}
                             </Button>
