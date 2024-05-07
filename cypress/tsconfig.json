@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+      "jsx": "react",
       "target": "es5",
       "lib": ["es5", "dom"],
       "types": ["cypress", "node"],
@@ -7,5 +8,5 @@
       "isolatedModules": false
     },
     "exclude": ["../tsconfig.json"],
-    "include": ["**/*.ts"]
+    "include": ["**/*.ts", "**/*.tsx"]
   }
