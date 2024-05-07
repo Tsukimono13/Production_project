@@ -6,7 +6,7 @@ import { Page } from '@/widgets/Page';
 import cls from './ErrorPage.module.scss';
 
 interface ErrorPageProps {
-  className?: string;
+    className?: string;
 }
 
 export const ErrorPage = ({ className }: ErrorPageProps) => {
@@ -17,9 +17,7 @@ export const ErrorPage = ({ className }: ErrorPageProps) => {
         location.reload();
     };
     return (
-        <Page
-            className={classNames(cls.ErrorPage, { }, [className])}
-        >
+        <Page className={classNames(cls.ErrorPage, {}, [className])}>
             <p>{t('Произошла непредвиденная ошибка')}</p>
             <Button
                 onClick={reloadPage}

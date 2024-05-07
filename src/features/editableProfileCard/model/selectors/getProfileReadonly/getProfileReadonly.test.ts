@@ -12,8 +12,7 @@ describe('getProfileReadonly', () => {
     });
 
     test('with empty state', () => {
-        const state: DeepPartial<StateSchema> = {
-        };
+        const state: DeepPartial<StateSchema> = {};
         expect(getProfileReadOnly(state as StateSchema)).toEqual(undefined);
     });
 });

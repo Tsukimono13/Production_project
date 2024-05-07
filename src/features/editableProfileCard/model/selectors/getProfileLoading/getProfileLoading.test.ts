@@ -12,8 +12,7 @@ describe('getProfileLoading', () => {
     });
 
     test('with empty state', () => {
-        const state: DeepPartial<StateSchema> = {
-        };
+        const state: DeepPartial<StateSchema> = {};
         expect(getProfileLoading(state as StateSchema)).toEqual(undefined);
     });
 });

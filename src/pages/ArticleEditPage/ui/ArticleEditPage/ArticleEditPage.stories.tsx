@@ -14,12 +14,13 @@ export default {
     decorators: [StoreDecorator({})],
 } as ComponentMeta<typeof ArticleEditPage>;
 
-const Template: ComponentStory<typeof ArticleEditPage> = (args) => <ArticleEditPage />;
+const Template: ComponentStory<typeof ArticleEditPage> = (args) => (
+    <ArticleEditPage />
+);
 
 export const Light = Template.bind({});
 Light.args = {};
 
 export const Dark = Template.bind({});
-Dark.args = {
-};
+Dark.args = {};
 Dark.decorators = [StoreDecorator({}), ThemeDecorator(Theme.DARK)];

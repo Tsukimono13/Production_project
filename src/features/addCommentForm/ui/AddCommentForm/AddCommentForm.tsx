@@ -3,8 +3,14 @@ import { memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { addCommentsFormActions, addCommentsFormReducer } from '../../model/slice/addCommentFormSlice';
+import {
+    DynamicModuleLoader,
+    ReducersList,
+} from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import {
+    addCommentsFormActions,
+    addCommentsFormReducer,
+} from '../../model/slice/addCommentFormSlice';
 import {
     getAddCommentFormError,
     getAddCommentFormText,
@@ -19,20 +25,23 @@ const reducers: ReducersList = {
 };
 
 export interface AddCommentFormProps {
-  className?: string;
-  onSendComment: (text: string) => void;
+    className?: string;
+    onSendComment: (text: string) => void;
 }
 
-const AddCommentForm = memo((props : AddCommentFormProps) => {
+const AddCommentForm = memo((props: AddCommentFormProps) => {
     const { className, onSendComment } = props;
     const { t } = useTranslation();
     const dispatch = useAppDispatch();
     const text = useSelector(getAddCommentFormText);
     const error = useSelector(getAddCommentFormError);
 
-    const onCommentTextChange = useCallback((value: string) => {
-        dispatch(addCommentsFormActions.setText(value));
-    }, [dispatch]);
+    const onCommentTextChange = useCallback(
+        (value: string) => {
+            dispatch(addCommentsFormActions.setText(value));
+        },
+        [dispatch],
+    );
 
     const onSendHandler = useCallback(() => {
         onSendComment(text || '');
@@ -45,7 +54,7 @@ const AddCommentForm = memo((props : AddCommentFormProps) => {
                 data-testid="AddCommentForm"
                 max
                 justify="between"
-                className={classNames(cls.AddCommentForm, { }, [className])}
+                className={classNames(cls.AddCommentForm, {}, [className])}
             >
                 <Input
                     data-testid="AddCommentForm.Input"

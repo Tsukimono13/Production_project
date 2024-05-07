@@ -12,7 +12,9 @@ export default {
     },
 } as ComponentMeta<typeof Popover>;
 
-const Template: ComponentStory<typeof Popover> = (args) => <Popover {...args} />;
+const Template: ComponentStory<typeof Popover> = (args) => (
+    <Popover {...args} />
+);
 
 export const Light = Template.bind({});
 Light.args = {
@@ -30,7 +32,9 @@ export const Dark = Template.bind({});
 Dark.args = {
     trigger: <Button>Open</Button>,
     children: (
-        <div>Storybook let us pass different props to a component in each story.</div>
+        <div>
+            Storybook let us pass different props to a component in each story.
+        </div>
     ),
 };
 Dark.decorators = [ThemeDecorator(Theme.DARK)];

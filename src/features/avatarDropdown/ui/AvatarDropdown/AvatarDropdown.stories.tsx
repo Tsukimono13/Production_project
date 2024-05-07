@@ -21,28 +21,32 @@ const Template: ComponentStory<typeof AvatarDropdown> = (args) => (
 );
 
 export const Primary = Template.bind({});
-Primary.args = {
-};
-Primary.decorators = [StoreDecorator({
-    user: {
-        authData: {
-            id: '1',
-            username: 'admin',
-            avatar: 'https://w7.pngwing.com/pngs/926/762/png-transparent-avatar-blond-female-girl-person-user-woman-user-pictures-icon.png',
-            roles: [UserRole.ADMIN],
+Primary.args = {};
+Primary.decorators = [
+    StoreDecorator({
+        user: {
+            authData: {
+                id: '1',
+                username: 'admin',
+                avatar: 'https://w7.pngwing.com/pngs/926/762/png-transparent-avatar-blond-female-girl-person-user-woman-user-pictures-icon.png',
+                roles: [UserRole.ADMIN],
+            },
         },
-    },
-})];
+    }),
+];
 
 export const Dark = Template.bind({});
 Dark.args = {};
-Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
-    user: {
-        authData: {
-            id: '1',
-            username: 'admin',
-            avatar: 'https://w7.pngwing.com/pngs/926/762/png-transparent-avatar-blond-female-girl-person-user-woman-user-pictures-icon.png',
-            roles: [UserRole.ADMIN],
+Dark.decorators = [
+    ThemeDecorator(Theme.DARK),
+    StoreDecorator({
+        user: {
+            authData: {
+                id: '1',
+                username: 'admin',
+                avatar: 'https://w7.pngwing.com/pngs/926/762/png-transparent-avatar-blond-female-girl-person-user-woman-user-pictures-icon.png',
+                roles: [UserRole.ADMIN],
+            },
         },
-    },
-})];
+    }),
+];

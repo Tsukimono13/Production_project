@@ -8,8 +8,15 @@ project.addSourceFilesAtPaths('src/**/*.tsx');
 const files = project.getSourceFiles();
 
 function isAbsolute(value: string) {
-    const layers = ['app', 'shared', 'entities', 'features', 'widgets', 'pages'];
-    return (layers.some((layers) => value.startsWith(layers)));
+    const layers = [
+        'app',
+        'shared',
+        'entities',
+        'features',
+        'widgets',
+        'pages',
+    ];
+    return layers.some((layers) => value.startsWith(layers));
 }
 
 files.forEach((sourceFile) => {

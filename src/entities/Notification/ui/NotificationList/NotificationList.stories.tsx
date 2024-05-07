@@ -13,12 +13,13 @@ export default {
     },
 } as ComponentMeta<typeof NotificationList>;
 
-const Template: ComponentStory<typeof NotificationList> = (args) => <NotificationList {...args} />;
+const Template: ComponentStory<typeof NotificationList> = (args) => (
+    <NotificationList {...args} />
+);
 
 export const Light = Template.bind({});
 Light.args = {};
-Light.decorators = [StoreDecorator({
-})];
+Light.decorators = [StoreDecorator({})];
 
 const mock = {
     url: `${__API__}/notifications`,
@@ -44,19 +45,13 @@ const mock = {
 };
 
 Light.parameters = {
-    mockData: [
-        mock,
-    ],
+    mockData: [mock],
 };
 
 export const Dark = Template.bind({});
 Dark.args = {};
 
-Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
-
-})];
+Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];
 Dark.parameters = {
-    mockData: [
-        mock,
-    ],
+    mockData: [mock],
 };

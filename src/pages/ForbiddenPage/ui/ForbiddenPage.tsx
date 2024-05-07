@@ -4,7 +4,7 @@ import { Page } from '@/widgets/Page';
 
 interface ForbiddenPageProps {
     className?: string;
-  }
+}
 
 const ForbiddenPage = (props: ForbiddenPageProps) => {
     const { className } = props;

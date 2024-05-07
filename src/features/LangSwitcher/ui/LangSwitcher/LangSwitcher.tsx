@@ -6,8 +6,8 @@ import RuSvg from '@/shared/assets/icons/ru.svg';
 import { Icon } from '@/shared/ui/Icon';
 
 interface LangSwitcherProps {
-  className?: string;
-  short?: boolean;
+    className?: string;
+    short?: boolean;
 }
 
 export const LangSwitcher = memo(({ className, short }: LangSwitcherProps) => {
@@ -17,13 +17,11 @@ export const LangSwitcher = memo(({ className, short }: LangSwitcherProps) => {
         i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
     };
 
-    const icon = i18n.language === 'ru' ? <Icon Svg={RuSvg} /> : <Icon Svg={EnSvg} />;
+    const icon =
+        i18n.language === 'ru' ? <Icon Svg={RuSvg} /> : <Icon Svg={EnSvg} />;
 
     return (
-        <Button
-            theme={ThemeButton.CLEAR}
-            onClick={toggle}
-        >
+        <Button theme={ThemeButton.CLEAR} onClick={toggle}>
             {icon}
             {/* {t(short ? 'Короткий вариант' : 'Язык')} */}
         </Button>

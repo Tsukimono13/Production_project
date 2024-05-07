@@ -14,14 +14,14 @@ export default {
     decorators: [StoreDecorator({})],
 } as ComponentMeta<typeof ArticlePage>;
 
-const Template: ComponentStory<typeof ArticlePage> = (args) => <ArticlePage {...args} />;
+const Template: ComponentStory<typeof ArticlePage> = (args) => (
+    <ArticlePage {...args} />
+);
 
 export const Light = Template.bind({});
-Light.args = {
-};
+Light.args = {};
 
 export const Dark = Template.bind({});
-Dark.args = {
-};
+Dark.args = {};
 
 Dark.decorators = [ThemeDecorator(Theme.DARK)];

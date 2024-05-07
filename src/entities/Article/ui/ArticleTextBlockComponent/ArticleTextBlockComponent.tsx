@@ -11,18 +11,28 @@ interface ArticleTextBlockComponentProps {
     title?: boolean;
 }
 
-export const ArticleTextBlockComponent = memo((props: ArticleTextBlockComponentProps) => {
-    const { className, block, title = true } = props;
-    const { t } = useTranslation();
+export const ArticleTextBlockComponent = memo(
+    (props: ArticleTextBlockComponentProps) => {
+        const { className, block, title = true } = props;
+        const { t } = useTranslation();
 
-    return (
-        <div className={classNames(cls.ArticleTextBlockComponents, {}, [className])}>
-            {title && block.title && (
-                <Text title={block.title} className={cls.title} />
-            )}
-            {block.paragraphs.map((paragraph) => (
-                <Text text={paragraph} key={paragraph} className={cls.paragraph} />
-            ))}
-        </div>
-    );
-});
+        return (
+            <div
+                className={classNames(cls.ArticleTextBlockComponents, {}, [
+                    className,
+                ])}
+            >
+                {title && block.title && (
+                    <Text title={block.title} className={cls.title} />
+                )}
+                {block.paragraphs.map((paragraph) => (
+                    <Text
+                        text={paragraph}
+                        key={paragraph}
+                        className={cls.paragraph}
+                    />
+                ))}
+            </div>
+        );
+    },
+);

@@ -5,11 +5,12 @@ import EyeSvg from '@/shared/assets/icons/eye.svg';
 import CalendarSvg from '@/shared/assets/icons/calendar.svg';
 import { getRouteArticleDetails } from '@/shared/const/router';
 import cls from './ArticleListItem.module.scss';
-import {
-    Article, ArticleTextBlock,
-} from '../../model/types/article';
+import { Article, ArticleTextBlock } from '../../model/types/article';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
-import { ArticleView, ArticleBlockType } from '../../model/consts/articleConsts';
+import {
+    ArticleView,
+    ArticleBlockType,
+} from '../../model/consts/articleConsts';
 import { AppLink } from '@/shared/ui/AppLink';
 import { Card, CardTheme } from '@/shared/ui/Card';
 import { Icon, IconType } from '@/shared/ui/Icon';
@@ -26,12 +27,7 @@ interface ArticleListItemProps {
 }
 
 export const ArticleListItem = memo((props: ArticleListItemProps) => {
-    const {
-        className,
-        article,
-        view,
-        target,
-    } = props;
+    const { className, article, view, target } = props;
     const { t } = useTranslation();
 
     if (view === ArticleView.BIG) {
@@ -41,9 +37,15 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
         return (
             <div
                 data-testid="ArticleListItem"
-                className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
+                className={classNames(cls.ArticleListItem, {}, [
+                    className,
+                    cls[view],
+                ])}
             >
-                <AppLink to={getRouteArticleDetails(article.id)} target={target}>
+                <AppLink
+                    to={getRouteArticleDetails(article.id)}
+                    target={target}
+                >
                     <Card className={cls.card}>
                         <AppImage
                             fallback={<Skeleton width="100%" height={250} />}
@@ -52,15 +54,31 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                             className={cls.img}
                         />
                         <VStack className={cls.header} gap="12">
-                            <Text title={article.title} size={TextSize.S} className={cls.title} />
+                            <Text
+                                title={article.title}
+                                size={TextSize.S}
+                                className={cls.title}
+                            />
                             <VStack gap="8">
                                 <HStack gap="8">
-                                    <Icon Svg={CalendarSvg} theme={IconType.SECOND} />
-                                    <Text text={article.createdAt} className={cls.date} />
+                                    <Icon
+                                        Svg={CalendarSvg}
+                                        theme={IconType.SECOND}
+                                    />
+                                    <Text
+                                        text={article.createdAt}
+                                        className={cls.date}
+                                    />
                                 </HStack>
                                 <HStack gap="8">
-                                    <Icon Svg={EyeSvg} theme={IconType.SECOND} />
-                                    <Text text={String(article.views)} className={cls.views} />
+                                    <Icon
+                                        Svg={EyeSvg}
+                                        theme={IconType.SECOND}
+                                    />
+                                    <Text
+                                        text={String(article.views)}
+                                        className={cls.views}
+                                    />
                                 </HStack>
                             </VStack>
                             <Card theme={CardTheme.TAG}>
@@ -85,7 +103,10 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
             data-testid="ArticleListItem"
             target={target}
             to={getRouteArticleDetails(article.id)}
-            className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
+            className={classNames(cls.ArticleListItem, {}, [
+                className,
+                cls[view],
+            ])}
         >
             <Card>
                 <AppImage
@@ -95,15 +116,25 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                     alt={article.title}
                 />
                 <div className={cls.contentWrapper}>
-                    <Text text={article.title} className={cls.title} size={TextSize.M} />
+                    <Text
+                        text={article.title}
+                        className={cls.title}
+                        size={TextSize.M}
+                    />
                     <HStack justify="between">
                         <HStack gap="8">
                             <Icon Svg={CalendarSvg} theme={IconType.SECOND} />
-                            <Text text={article.createdAt} className={cls.date} />
+                            <Text
+                                text={article.createdAt}
+                                className={cls.date}
+                            />
                         </HStack>
                         <HStack gap="8">
                             <Icon Svg={EyeSvg} theme={IconType.SECOND} />
-                            <Text text={String(article.views)} className={cls.views} />
+                            <Text
+                                text={String(article.views)}
+                                className={cls.views}
+                            />
                         </HStack>
                     </HStack>
                     <HStack gap="4">

@@ -9,12 +9,15 @@ import { TextAlign, TextSize, Text } from '@/shared/ui/Text';
 
 interface NotFoundPageProps {
     className?: string;
-  }
+}
 
-const NotFoundPage = ({ className } : NotFoundPageProps) => {
+const NotFoundPage = ({ className }: NotFoundPageProps) => {
     const { t } = useTranslation();
     return (
-        <Page data-testid="NotFoundPage" className={classNames(cls.NotFoundPage, {}, [className])}>
+        <Page
+            data-testid="NotFoundPage"
+            className={classNames(cls.NotFoundPage, {}, [className])}
+        >
             <VStack max justify="center" align="center">
                 <img src={NotFound} alt={t('Грустный кот')} />
                 <Text

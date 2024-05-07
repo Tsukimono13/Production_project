@@ -3,9 +3,7 @@ import { memo, useCallback, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { LoginModal } from '@/features/AuthByUsername';
-import {
-    getUserData,
-} from '@/entities/User';
+import { getUserData } from '@/entities/User';
 import { getRouteArticleCreate, getRouteMain } from '@/shared/const/router';
 import { NotificationButton } from '@/features/notificationButton';
 import { AvatarDropdown } from '@/features/avatarDropdown';
@@ -17,7 +15,7 @@ import { Icon } from '@/shared/ui/Icon';
 import { HStack } from '@/shared/ui/Stack';
 
 interface NavbarProps {
-  className?: string;
+    className?: string;
 }
 
 export const Navbar = memo(({ className }: NavbarProps) => {

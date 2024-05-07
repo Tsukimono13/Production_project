@@ -4,7 +4,10 @@ import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDe
 import { Theme } from '@/shared/const/theme';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { ArticleDetails } from './ArticleDetails';
-import { ArticleType, ArticleBlockType } from '../../model/consts/articleConsts';
+import {
+    ArticleType,
+    ArticleBlockType,
+} from '../../model/consts/articleConsts';
 import { Article } from '../../model/types/article';
 
 export default {
@@ -15,7 +18,9 @@ export default {
     },
 } as ComponentMeta<typeof ArticleDetails>;
 
-const Template: ComponentStory<typeof ArticleDetails> = (args) => <ArticleDetails {...args} />;
+const Template: ComponentStory<typeof ArticleDetails> = (args) => (
+    <ArticleDetails {...args} />
+);
 
 const article: Article = {
     id: '1',
@@ -93,32 +98,43 @@ const article: Article = {
 
 export const Light = Template.bind({});
 Light.args = {};
-Light.decorators = [StoreDecorator({
-    articleDetails: {
-        data: article,
-    },
-})];
+Light.decorators = [
+    StoreDecorator({
+        articleDetails: {
+            data: article,
+        },
+    }),
+];
 
 export const Dark = Template.bind({});
 Dark.args = {};
-Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
-    articleDetails: {
-        data: article,
-    },
-})];
+Dark.decorators = [
+    ThemeDecorator(Theme.DARK),
+    StoreDecorator({
+        articleDetails: {
+            data: article,
+        },
+    }),
+];
 
 export const isLoading = Template.bind({});
 isLoading.args = {};
-isLoading.decorators = [ThemeDecorator(Theme.BRIGHT), StoreDecorator({
-    articleDetails: {
-        isLoading: true,
-    },
-})];
+isLoading.decorators = [
+    ThemeDecorator(Theme.BRIGHT),
+    StoreDecorator({
+        articleDetails: {
+            isLoading: true,
+        },
+    }),
+];
 
 export const Error = Template.bind({});
 Error.args = {};
-Error.decorators = [ThemeDecorator(Theme.BRIGHT), StoreDecorator({
-    articleDetails: {
-        error: 'Error',
-    },
-})];
+Error.decorators = [
+    ThemeDecorator(Theme.BRIGHT),
+    StoreDecorator({
+        articleDetails: {
+            error: 'Error',
+        },
+    }),
+];

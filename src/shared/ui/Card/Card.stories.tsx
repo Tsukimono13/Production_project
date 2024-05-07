@@ -16,12 +16,16 @@ const Template: ComponentStory<typeof Card> = (args) => <Card {...args} />;
 
 export const Light = Template.bind({});
 Light.args = {
-    children: <Text title="lorem lorem" text="remon kokem borem" marginT={10} />,
+    children: (
+        <Text title="lorem lorem" text="remon kokem borem" marginT={10} />
+    ),
 };
 
 export const Dark = Template.bind({});
 Dark.args = {
-    children: <Text title="lorem lorem" text="remon kokem borem" marginT={10} />,
+    children: (
+        <Text title="lorem lorem" text="remon kokem borem" marginT={10} />
+    ),
 };
 
 Dark.decorators = [ThemeDecorator(Theme.DARK)];

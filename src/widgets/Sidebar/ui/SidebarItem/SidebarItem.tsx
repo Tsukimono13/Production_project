@@ -10,9 +10,9 @@ import { SidebarItemType } from '../../model/types/sidebar';
 interface SidebarItemProps {
     item: SidebarItemType;
     collapsed: boolean;
-  }
+}
 
-const SidebarItem = memo((props : SidebarItemProps) => {
+const SidebarItem = memo((props: SidebarItemProps) => {
     const { item, collapsed } = props;
     const { t } = useTranslation();
     const isAuth = useSelector(getUserData);
@@ -28,9 +28,7 @@ const SidebarItem = memo((props : SidebarItemProps) => {
             className={classNames(cls.item, { [cls.collapsed]: collapsed })}
         >
             <item.Icon width={24} height={24} />
-            <span className={cls.link}>
-                {t(item.text)}
-            </span>
+            <span className={cls.link}>{t(item.text)}</span>
         </AppLink>
     );
 });

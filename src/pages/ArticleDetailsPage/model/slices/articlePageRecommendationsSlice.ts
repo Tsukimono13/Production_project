@@ -8,33 +8,35 @@ const recommendationsAdapter = createEntityAdapter<Article>({
     selectId: (article) => article.id,
 });
 
-export const getArticleRecommendations = recommendationsAdapter.getSelectors<StateSchema>(
-    (state) => state.articleDetailsPage?.recommendations || recommendationsAdapter.getInitialState(),
-);
+export const getArticleRecommendations =
+    recommendationsAdapter.getSelectors<StateSchema>(
+        (state) =>
+            state.articleDetailsPage?.recommendations ||
+            recommendationsAdapter.getInitialState(),
+    );
 
 const articlePageRecommendationsSlice = createSlice({
     name: 'articlePageRecommendations',
-    initialState: recommendationsAdapter.getInitialState<ArticlePageRecommendationsSchema>({
-        isLoading: false,
-        error: undefined,
-        entities: {},
-        ids: [],
-    }),
-    reducers: {
-    },
+    initialState:
+        recommendationsAdapter.getInitialState<ArticlePageRecommendationsSchema>(
+            {
+                isLoading: false,
+                error: undefined,
+                entities: {},
+                ids: [],
+            },
+        ),
+    reducers: {},
     extraReducers: (builder) => {
         builder
             .addCase(fetchArticleRecommendations.pending, (state) => {
                 state.error = undefined;
                 state.isLoading = true;
             })
-            .addCase(
-                fetchArticleRecommendations.fulfilled,
-                (state, action) => {
-                    state.isLoading = false;
-                    recommendationsAdapter.setAll(state, action.payload);
-                },
-            )
+            .addCase(fetchArticleRecommendations.fulfilled, (state, action) => {
+                state.isLoading = false;
+                recommendationsAdapter.setAll(state, action.payload);
+            })
             .addCase(fetchArticleRecommendations.rejected, (state, action) => {
                 state.isLoading = false;
                 state.error = action.payload;
@@ -42,5 +44,7 @@ const articlePageRecommendationsSlice = createSlice({
     },
 });
 
-export const { actions: articlePageRecommendationsActions } = articlePageRecommendationsSlice;
-export const { reducer: articlePageRecommendationsReducer } = articlePageRecommendationsSlice;
+export const { actions: articlePageRecommendationsActions } =
+    articlePageRecommendationsSlice;
+export const { reducer: articlePageRecommendationsReducer } =
+    articlePageRecommendationsSlice;

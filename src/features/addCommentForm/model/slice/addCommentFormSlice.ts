@@ -3,7 +3,6 @@ import { addCommentsFormSchema } from '../types/addCommentsForm';
 
 const initialState: addCommentsFormSchema = {
     text: '',
-
 };
 
 export const addCommentFormSlice = createSlice({

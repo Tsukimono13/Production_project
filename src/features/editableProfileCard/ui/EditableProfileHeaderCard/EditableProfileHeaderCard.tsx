@@ -16,9 +16,11 @@ import { TextSize, Text } from '@/shared/ui/Text';
 
 interface EditableProfileHeaderCardProps {
     className?: string;
-  }
+}
 
-export const EditableProfileHeaderCard = ({ className } : EditableProfileHeaderCardProps) => {
+export const EditableProfileHeaderCard = ({
+    className,
+}: EditableProfileHeaderCardProps) => {
     const { t } = useTranslation('profile');
     const authData = useSelector(getUserData);
     const profileData = useSelector(getProfileData);

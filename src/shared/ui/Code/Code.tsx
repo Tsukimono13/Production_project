@@ -18,12 +18,14 @@ export const Code = memo((props: CodeProps) => {
 
     return (
         <pre className={classNames(cls.Code, {}, [className])}>
-            <Button onClick={onCopy} className={cls.copyBtn} theme={ThemeButton.CLEAR}>
+            <Button
+                onClick={onCopy}
+                className={cls.copyBtn}
+                theme={ThemeButton.CLEAR}
+            >
                 <CopySvg width={24} height={24} />
             </Button>
-            <code>
-                {codeText}
-            </code>
+            <code>{codeText}</code>
         </pre>
     );
 });

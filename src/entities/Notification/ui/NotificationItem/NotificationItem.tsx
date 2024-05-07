@@ -13,9 +13,7 @@ export const NotificationItem = memo((props: NotificationItemProps) => {
     const { className, item } = props;
 
     const content = (
-        <div
-            className={classNames(cls.NotificationItem, {}, [className])}
-        >
+        <div className={classNames(cls.NotificationItem, {}, [className])}>
             <Text
                 title={item.title}
                 text={item.description}

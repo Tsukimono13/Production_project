@@ -4,14 +4,14 @@ import { rtkApi } from '@/shared/api/rtkApi';
 interface ArticleRatingArg {
     userId: string;
     articleId: string;
- }
+}
 
 interface RateArticleArg {
     userId: string;
     articleId: string;
     rate: number;
     feedback?: string;
- }
+}
 
 const articleRatingApi = rtkApi.injectEndpoints({
     endpoints: (build) => ({
