@@ -16,6 +16,7 @@ import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDet
 import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments';
 import { ArticleRating } from '@/features/articleRating';
 import { VStack } from '@/shared/ui/Stack';
+import { getFeatureFlags } from '@/shared/lib/features';
 
 interface ArticleDetailsPageProps {
     className?: string;
@@ -29,6 +30,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
     const { className } = props;
     const { t } = useTranslation('article');
     const { id } = useParams<{ id: string }>();
+    const isArticleRatingEnable = getFeatureFlags('isArticleRatingEnabled');
 
     if (!id) {
         return null;

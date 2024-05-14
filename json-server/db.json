@@ -955,6 +955,10 @@
             "username": "admin",
             "password": "123",
             "roles": ["ADMIN"],
+            "features": {
+                "isArticleRatingEnabled": true,
+                "isCounterEnabled": true
+            },
             "avatar": "https://i.pinimg.com/originals/f9/90/5e/f9905e59ecd27af6211ef25366a75e5a.png"
         },
         {
@@ -962,6 +966,10 @@
             "username": "user",
             "password": "123",
             "roles": ["USER"],
+            "features": {
+                "isArticleRatingEnabled": false,
+                "isCounterEnabled": false
+            },
             "avatar": "https://i.pinimg.com/736x/9f/3a/da/9f3ada5db0d3581a8111f401790726a1.jpg"
         },
         {
@@ -969,6 +977,10 @@
             "username": "manager",
             "password": "123",
             "roles": ["MANAGER"],
+            "features": {
+                "isArticleRatingEnabled": true,
+                "isCounterEnabled": false
+            },
             "avatar": "https://p7.hiclipart.com/preview/435/40/972/5bbe8cd074088.jpg"
         },
         {
@@ -976,6 +988,10 @@
             "username": "testuser",
             "password": "123",
             "roles": ["ADMIN"],
+            "features": {
+                "isArticleRatingEnabled": false,
+                "isCounterEnabled": true
+            },
             "avatar": "https://p7.hiclipart.com/preview/435/40/972/5bbe8cd074088.jpg"
         }
     ],
