@@ -27,7 +27,8 @@ module.exports = {
         'unused-imports',
     ],
     rules: {
-        'react/jsx-filename-extension': [2,
+        'react/jsx-filename-extension': [
+            2,
             { extensions: ['.js', '.jsx', '.tsx'] },
         ],
         'import/no-unresolved': 'off',
@@ -43,13 +44,25 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
         'linebreak-style': 0,
-        'i18next/no-literal-string': ['error',
+        'i18next/no-literal-string': [
+            'error',
             {
                 markupOnly: true,
                 ignoreAttribute: [
-                    'data-testid', 'as', 'to', 'border', 'target', 'justify', 'align', 'direction', 'gap', 'role',
+                    'data-testid',
+                    'as',
+                    'to',
+                    'border',
+                    'target',
+                    'justify',
+                    'align',
+                    'direction',
+                    'gap',
+                    'role',
+                    'feature',
                 ],
-            }],
+            },
+        ],
         'max-len': ['error', { ignoreComments: true, code: 120 }],
         'jsx-a11y/no-static-element-interactions': 'off',
         'jsx-a11y/click-events-have-key-events': 'off',
@@ -65,7 +78,11 @@ module.exports = {
             'error',
             {
                 alias: '@',
-                testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
+                testFilesPatterns: [
+                    '**/*.test.*',
+                    '**/*.story.*',
+                    '**/StoreDecorator.tsx',
+                ],
             },
         ],
         'tsuki-prod-plugin/layer-imports': [
