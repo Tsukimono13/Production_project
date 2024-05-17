@@ -1006,7 +1006,8 @@
         "isCounterEnabled": false
       },
       "jsonSettings": {
-        "theme": "app_dark_theme"
+        "theme": "app_dark_theme",
+        "isArticlesPageWasOpened": true
       },
       "avatar": "https://i.pinimg.com/736x/9f/3a/da/9f3ada5db0d3581a8111f401790726a1.jpg"
     },
