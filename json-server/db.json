@@ -973,6 +973,12 @@
       "text": "some comment 2",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "9",
+      "userId": "2",
+      "text": "hi! it was super!",
+      "id": "xETXv16"
     }
   ],
   "users": [
